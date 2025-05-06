@@ -1,3 +1,4 @@
+/* Importando fontes averta */
 @font-face {
   font-family: "Averta Regular";
   src: url('./fonts/AVERTA/AVERTA-REGULAR.OTF');
@@ -7,39 +8,38 @@
   src: url('./fonts/AVERTA/Averta\ Bold.otf');
 }
 
+
+/* Área de RESET */
 * {
   margin: 0;
   padding: 0;
 }
 
-a {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-decoration: none;
-}
-
+/* Estilo padrão para imagens */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* Estilização do corpo da página */
 body {
-  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-  
+  font-family: 'Averta Regular', Arial, Helvetica, sans-serif;
   background-color: rgb(246, 249, 252);
 }
 
+/* Cabeçalho fixo com sombra */
 .header {
   background: #4bbedb;
-  /* border-bottom: rgb(246, 249, 252) solid 2px; */
   padding-inline: 15px;
   position: fixed;
-  top: 0;         
-  left: 0;        
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;  
-  box-shadow: -2px 8px 5px #4bbedb; 
+  z-index: 1000;
+  box-shadow: -2px 8px 5px #4bbedb;
 }
 
+/* Container de navegação principal */
 .nav {
   max-width: 1280px;
   height: 70px;
@@ -50,12 +50,16 @@ body {
   padding-right: 22px;
 }
 
+/* Lista de navegação */
 .nav-list {
   display: flex;
   gap: 50px;
   list-style: none;
+  margin-top: 8px;
+  margin-right: -3px;
 }
 
+/* Estilo dos links de navegação */
 .nav-list a {
   font-size: 20px;
   color: rgb(246, 249, 252);
@@ -63,11 +67,13 @@ body {
   font-weight: bold;
 }
 
+/* Efeito hover nos links de navegação */
 .nav-list a:hover {
   color: black;
   transition: 0.5s;
 }
 
+/* Botão de menu hambúrguer para dispositivos móveis */
 .hamburger {
   display: none;
   border: none;
@@ -76,6 +82,7 @@ body {
   cursor: pointer;
 }
 
+/* Linhas do menu hambúrguer */
 .hamburger::after,
 .hamburger::before {
   content: " ";
@@ -88,39 +95,47 @@ body {
   transition: 0.3s;
 }
 
+/* Logo da FabLab */
 #logo_fab {
   width: 118px;
   height: 118px;
   margin-top: 7px;
+  margin-left: -22px;
 }
+
+/* Dropdown (menu suspenso) */
 .dropdown {
   position: relative;
 }
 
+/* Menu do dropdown */
 .dropdown-menu {
-position: absolute;
-top: 100%;
-left: 0;
-background-color: rgb(246, 249, 252);
-border: 1px solid #4bbedb;
-border-radius: 5px;
-padding: 10px 0;
-width: 200px;
-opacity: 0;
-visibility: hidden;
-transition: opacity 0.3s, visibility 0.3s;
-list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(246, 249, 252);
+  border: 1px solid #4bbedb;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  list-style: none;
 }
 
+/* Exibir dropdown ao passar o mouse */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
 }
 
+/* Itens do menu suspenso */
 .dropdown-menu li {
   padding: 5px 15px;
 }
 
+/* Ícones do menu */
 .dropdown-menu i {
   margin-right: 10px;
   width: 20px;
@@ -128,6 +143,7 @@ list-style: none;
   color: inherit;
 }
 
+/* Estilo dos links dentro do dropdown */
 .dropdown-menu a {
   color: #4bbedb !important;
   padding: 5px 0 !important;
@@ -136,10 +152,29 @@ list-style: none;
   align-items: center;
 }
 
+/* Hover nos links do dropdown */
 .dropdown-menu a:hover {
-  color: #222 !important;
+  color: #333 !important;
 }
 
+/* Estilo da seção principal */
+.main_home {
+  margin-top: 80px;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container de conteúdo principal */
+.content-container {
+  max-width: 670px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =================== SEÇÃO DE RESPONSIVIDADES =================== */
+
+/* Responsividade para até 750px */
 @media (max-width: 750px) {
   .hamburger {
     display: block;
@@ -149,15 +184,15 @@ list-style: none;
   #logo_fab {
     position: relative;
     left: -3px;
-    z-index: 100;
+    z-index: 10;
   }
-  
+
   .nav-list {
     position: fixed;
     top: -50px;
     left: 0;
     width: 100vw;
-    height: 118vh;
+    height: 105vh;
     background-color: #4bbedb;
     clip-path: circle(100px at 90% -15%);
     transition: 0.8s ease-out;
@@ -174,18 +209,10 @@ list-style: none;
     opacity: 0;
   }
 
-  .nav-list li:nth-child(1) a {
-    transition: 0.5s 0.2s;
-  }
+  .nav-list li:nth-child(1) a { transition: 0.5s 0.2s; }
+  .nav-list li:nth-child(2) a { transition: 0.5s 0.4s; }
+  .nav-list li:nth-child(3) a { transition: 0.5s 0.6s; }
 
-  .nav-list li:nth-child(2) a {
-    transition: 0.5s 0.4s;
-  }
-
-  .nav-list li:nth-child(3) a {
-    transition: 0.5s 0.6s;
-  }
-  
   .nav.active .nav-list {
     clip-path: circle(1500px at 90% -15%);
     pointer-events: all;
@@ -194,7 +221,7 @@ list-style: none;
   .nav.active .nav-list a {
     opacity: 1;
   }
-  
+
   .nav.active .hamburger {
     position: fixed;
     top: 26px;
@@ -214,43 +241,51 @@ list-style: none;
   }
 
   .dropdown {
-    position: relative;
+    width: 100%;
+    text-align: center;
   }
 
   .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(246, 249, 252);
-    border: 1px solid #4bbedb;
-    border-radius: 4px;
-    padding: 10px 0;
-    width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-    list-style: none;
+    position: static !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding: 0 !important;
+    margin: 0 auto;
   }
 
-  .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
+  .dropdown.active .dropdown-menu {
+    max-height: 500px;
+    padding: 10px 0 !important;
   }
 
   .dropdown-menu li {
-    padding: 5px 15px;
+    padding: 12px 0 !important;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 6px 0;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+
+  .dropdown-menu li:active {
+    transform: scale(1.05);
+    transition: transform 0.2s;
   }
 
   .dropdown-menu a {
-    color: #4bbedb !important;
-    padding: 5px 0 !important;
-    font-weight: normal !important;
-    display: flex;
-    align-items: center;
+    color: rgb(246, 249, 252) !important;
+    justify-content: center;
+    font-size: 18px !important;
   }
 
   .dropdown-menu a:hover {
-    color: #222 !important;
+    color: #333 !important;
   }
 
   .nav-list i {
@@ -260,57 +295,55 @@ list-style: none;
   }
 
   .dropdown-menu i {
-    font-size: 0.9em;
-    color: #4bbedb;
+    color: rgb(246, 249, 252) !important;
   }
 }
 
-.main_home {
-  margin-top: 80px;
-  padding: 20px;
-  color: #222;
-  line-height: 1.6; 
-}
-
-.content-container {
-  max-width: 670px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
+/* Responsividade para até 1024px */
 @media (max-width: 1024px) {
   .main_home {
     padding: 20px 40px;
   }
+
+  #logo_fab {
+    position: relative;
+    left: 15px;
+    z-index: 100;
+  }
 }
 
+/* Responsividade para até 768px */
 @media (max-width: 768px) {
   .main_home {
     padding: 20px 30px;
   }
-  
+
+  #logo_fab {
+    position: relative;
+    left: 4px;
+    z-index: 100;
+  }
+
   .nav-list {
     gap: 30px;
   }
 }
 
+/* Responsividade para até 480px */
 @media (max-width: 480px) {
   .main_home {
     padding: 20px 15px;
-  }
-  
-  .nav-list a {
-    font-size: 18px; 
-  }
-
-  .main_home {
     margin-top: 70px;
   }
-  
+
+  .nav-list a {
+    font-size: 18px;
+  }
+
   .dropdown-menu {
     width: 100%;
     left: 0;
-    border-radius: 0; 
+    border-radius: 0;
     border-left: none;
     border-right: none;
   }
