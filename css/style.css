@@ -3,11 +3,18 @@
   font-family: "Averta Regular";
   src: url('./fonts/AVERTA/AVERTA-REGULAR.OTF');
 }
+
 @font-face {
   font-family: "Averta Bold";
   src: url('./fonts/AVERTA/Averta\ Bold.otf');
 }
 
+/* Animação do gradiente */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  70% { background-position: 100% 50%; }
+  120% { background-position: 0% 50%; }
+}
 
 /* Área de RESET */
 * {
@@ -24,38 +31,47 @@ img {
 /* Estilização do corpo da página */
 body {
   font-family: 'Averta Regular', Arial, Helvetica, sans-serif;
-  background-color: rgb(246, 249, 252);
+  background-color: #e9e9e9;
   text-align: justify;
   font-size: 20;
-
+  overflow-x: hidden;
 }
 
-/* Cabeçalho fixo com sombra */
+/* Cabeçalho fixo */
 .header {
-  background: #4bbedb;
+  background: radial-gradient(circle at center, #1a81db, #4bbedb);
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
   padding-inline: 15px;
+  padding-bottom: 9px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: -2px 8px 5px #4bbedb;
+  z-index: 100;
+  box-shadow: -2px 8px 15px #89e7ff;
 }
 
-a{
+/* Identação de parágrafos */
+.ident {
+  text-indent: 22px;
+}
+
+a {
   text-decoration: none;
   display: inline-block;
   transition: transform 1s ease;
 }
 
-a:hover{
+a:hover {
   transform: translateY(-10px);
 }
 
-h2{
+h2 {
   margin-top: 1em;
 }
-/* Container de navegação principal */
+
+/* Escopo de navegação principal */
 .nav {
   max-width: 1280px;
   height: 70px;
@@ -78,45 +94,23 @@ h2{
 /* Estilo dos links de navegação */
 .nav-list a {
   font-size: 20px;
-  color: rgb(246, 249, 252);
+  color: #e9e9e9;
   padding-block: 16px;
   font-weight: bold;
 }
 
 /* Efeito hover nos links de navegação */
 .nav-list a:hover {
-  color: black;
+  color: #333;
   transition: 0.5s;
 }
 
-/* Botão de menu hambúrguer para dispositivos móveis */
-.hamburger {
-  display: none;
-  border: none;
-  background: none;
-  border-top: 3px solid rgb(246, 249, 252);
-  cursor: pointer;
-}
-
-/* Linhas do menu hambúrguer */
-.hamburger::after,
-.hamburger::before {
-  content: " ";
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: rgb(246, 249, 252);
-  margin-top: 5px;
-  position: relative;
-  transition: 0.3s;
-}
-
-p{
+p {
   font-size: 1.2em;
   text-align: justify;
 }
 
-ol{
+ol {
   margin-top: 1em;
   margin-left: 3em;
   margin-right: auto;
@@ -124,7 +118,7 @@ ol{
   list-style-type: none;
 }
 
-ol li{
+ol li {
   background-color: #4bbedb;
   padding: 5px 10px;
   margin: 3px 0;
@@ -133,13 +127,13 @@ ol li{
 
 /* Logo da FabLab */
 #logo_fab {
-  width: 118px;
-  height: 118px;
-  margin-top: 7px;
+  width: 140px;
+  height: 140px;
+  margin-top: 13px;
   margin-left: -22px;
 }
 
-/* Dropdown (menu suspenso) */
+/* Criação do menu dropdown (menu suspenso) */
 .dropdown {
   position: relative;
 }
@@ -149,7 +143,7 @@ ol li{
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgb(246, 249, 252);
+  background-color: #e9e9e9;
   border: 1px solid #4bbedb;
   border-radius: 5px;
   padding: 10px 0;
@@ -193,6 +187,17 @@ ol li{
   color: #333 !important;
 }
 
+.dropdown > a::after {
+  content: "▾";
+  margin-left: 6px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a::after {
+  transform: rotate(180deg);
+}
+
 /* Estilo da seção principal */
 .main_home {
   margin-top: 80px;
@@ -207,6 +212,78 @@ ol li{
   /* max-width: 1670px; */
   margin: 0 50px 0 0;
   padding: 0 20px;
+}
+
+/* Botão de menu hambúrguer para dispositivos móveis */
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid rgb(208, 219, 230);
+  cursor: pointer;
+}
+
+/* Linhas do menu hambúrguer */
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(208, 219, 230);
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+#botao_flutuante {
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Configuração do rodapé */
+#rodape {
+  box-sizing: border-box;
+  margin-top: 90px;
+  background: linear-gradient(100deg, #383838, #0c0c0c);
+  color: #e9e9e9; 
+  padding: 2rem; 
+  text-align: center;
+  width: 100%;
+}
+
+
+/* Container flexível para o conteúdo */
+#rodape div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Links sociais - espaçamento e tamanho responsivo */
+#social-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Texto do copyright - tamanho responsivo */
+#rodape p {
+  margin: 0;
+  font-size: clamp(0.9rem, 2vw, 1rem); /* Tamanho mínimo, ideal e máximo */
+}
+
+/* Ícones - tamanho e hover */
+.fab {
+  color: #e9e9e9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fab:hover {
+  transform: translateY(-3px);
 }
 
 /* =================== SEÇÃO DE RESPONSIVIDADES =================== */
@@ -230,7 +307,9 @@ ol li{
     left: 0;
     width: 100vw;
     height: 105vh;
-    background-color: #4bbedb;
+    background: linear-gradient(70deg, #1e88e5, #3ca7c2, #0a69bd);
+    background-size: 250% 100%;
+    animation: gradient 20s ease infinite;
     clip-path: circle(100px at 90% -15%);
     transition: 0.8s ease-out;
     flex-direction: column;
@@ -242,7 +321,7 @@ ol li{
 
   .nav-list a {
     font-size: 24px;
-    color: rgb(246, 249, 252);
+    color: rgb(208, 219, 230);
     opacity: 0;
   }
 
@@ -268,13 +347,13 @@ ol li{
 
   .nav.active .hamburger::before {
     transform: rotate(135deg);
-    background-color: rgb(246, 249, 252);
+    background-color: rgb(208, 219, 230);
   }
 
   .nav.active .hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
-    background-color: rgb(246, 249, 252);
+    background-color: rgb(208, 219, 230);
   }
 
   .dropdown {
@@ -316,7 +395,7 @@ ol li{
   }
 
   .dropdown-menu a {
-    color: rgb(246, 249, 252) !important;
+    color: rgb(208, 219, 230) !important;
     justify-content: center;
     font-size: 18px !important;
   }
@@ -332,8 +411,19 @@ ol li{
   }
 
   .dropdown-menu i {
-    color: rgb(246, 249, 252) !important;
+    color: rgb(208, 219, 230) !important;
   }
+
+  #botao_flutuante {
+    transition: all 0.4s ease;
+  }
+  
+  .nav:not(.active) ~ #botao_flutuante {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
 }
 
 /* Responsividade para até 1024px */
@@ -364,6 +454,15 @@ ol li{
   .nav-list {
     gap: 30px;
   }
+
+  #rodape {
+    padding: 1.5rem;
+  }
+
+  #social-links {
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
 }
 
 /* Responsividade para até 480px */
@@ -384,7 +483,95 @@ ol li{
     border-left: none;
     border-right: none;
   }
+
+  #rodape {
+    padding: 1rem;
+    margin-top: 60px;
+  }
+
+  #rodape div {
+    gap: 1rem;
+  }
+
+  #social-links {
+    font-size: 1.2rem;
+  }
 }
+
+/* =================================================== */
+
+/* Estilo do botão flutuante */
+#botao_flutuante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4bbedb, #1e88e5);
+  color: aliceblue;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  line-height: 60px;
+  cursor: pointer;
+  z-index: 100;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  animation-fill-mode: none; 
+}
+
+/* Efeito ao passar o mouse */
+#botao_flutuante:hover {
+  transform: scale(1.1);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #1e88e5, #4bbedb);
+}
+
+/* Efeito ao clicar */
+#botao_flutuante:active {
+  transform: scale(0.95);
+}
+
+/* Ícone */
+#botao_flutuante::after {
+  content: "↑";
+  display: inline-block;
+  transition: transform 0.3s ease; /* Adiciona transição apenas para o transform */
+}
+
+/* Aumenta a setinha do botão no hover */
+#botao_flutuante:hover::after {
+  transform: scale(1.3);
+  font-size: 1.2em;
+}
+
+/* Esconde o botão flutuante quando o menu está ativo */
+.nav.active ~ #botao_flutuante {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+/* Adicione isso junto com os estilos do botão flutuante */
+#botao_flutuante.click-effect {
+  animation: clickPulse 0.5s ease-out;
+}
+
+@keyframes clickPulse {
+  0% { box-shadow: 0 0 0 0 rgba(75, 190, 219, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(75, 190, 219, 0); }
+  100% { box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
+}
+
+
+/* Conteúdo de exemplo para demonstrar a rolagem */
+/* body {
+  height: 3000px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+} */
 
 /* Criando div para estilizar em caixa */
 /*

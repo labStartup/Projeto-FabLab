@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bem vindos ao FabLab</title>
+  <title>Bem vindos ao FabLab!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/style.css" />
-  
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script defer src="js/index.js"></script>
 </head>
 
 <body>
@@ -32,17 +32,19 @@
       </ul>
     </nav>
   </header>
+  
+  <button id="botao_flutuante" title="Voltar para o topo da página"></button>
 
   <main class="main_home">
     <div class="content-container">
-      <h1>Bem vindo ao The 4.20 Lab</h1>
-      <p>Em nosso Fab Lab oferecemos um espaço equipado com ferramentas de alta tecnologia para makers, designers,
+      <h1 id="titulo_intro">Bem vindo ao The 4.20 Lab</h1>
+      <p class="ident">Em nosso Fab Lab oferecemos um espaço equipado com ferramentas de alta tecnologia para makers, designers,
         engenheiros, professores, estudantes e entusiastas. Aqui, você poderá prototipar, aprender e transformar suas
         ideias em realidade.
         Conheça nosso espaço e se surpreenda com as diversas possibilidades para transcorrer sua criatividade.
       </p>
       <h2>Criatividade no FabLab: Onde as ideias ganham vida!</h2>
-      <p>Em nosso laboratório de fabricação digital, a criatividade não é apenas bem-vinda - ela é essencial. Aqui, a
+      <p class="ident">Em nosso laboratório de fabricação digital, a criatividade não é apenas bem-vinda - ela é essencial. Aqui, a
         liberdade de experimentar, errar e recriar irá transformar conceitos abstratos em projetos tangíveis. Seja com
         uma impressora 3D, uma cortadora a laser ou um bancada de eletrônica, cada ferramenta é um convite para inovar.
       </p>
@@ -76,11 +78,18 @@
         <li>Participe de desafios e hackathons - competições criativas são ótimas para pensar fora da caixa (“think outside the box”).</li>
       </ol>
       <p>Segundo <cite>Albert Einstein</cite>, "A criatividade é a inteligência se divertindo."</p>
-      <!-- Aqui vai entrar uma imagem -->
+    </div>
+    <!-- Aqui vai entrar uma imagem -->
   </main>
 
-
-  <script defer src="index.js"></script>
+  <footer id="rodape">
+    <div>
+      <p>© 2025 FabLab</p>
+      <div id="social-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
-
 </html>
