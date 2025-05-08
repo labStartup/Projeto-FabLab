@@ -9,13 +9,6 @@
   src: url('./fonts/AVERTA/Averta\ Bold.otf');
 }
 
-/* Animação do gradiente */
-@keyframes gradient {
-  0% { background-position: 0% 50%; }
-  70% { background-position: 100% 50%; }
-  120% { background-position: 0% 50%; }
-}
-
 /* Área de RESET */
 * {
   margin: 0;
@@ -25,25 +18,40 @@
 /* Estilização do corpo da página */
 body {
   font-family: 'Averta Regular', Arial, Helvetica, sans-serif;
-  background-color: #e9e9e9;
+  background-color: #d9dfe0;
   text-align: justify;
   font-size: 20;
   overflow-x: hidden;
 }
 
+/* Definindo classe bold para texto averta bold */
+.bold {
+  font-family: 'Averta Bold', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
 /* Cabeçalho fixo */
 .header {
-  background: radial-gradient(circle at center, #1a81db, #4bbedb);
+  background: radial-gradient(circle at center, #1a81db, #432fc7);
   background-size: 200% 200%;
   animation: gradient 15s ease infinite;
   padding-inline: 15px;
   padding-bottom: 9px;
-  position: fixed;
+  padding-left: 30px;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  box-shadow: -2px 8px 15px #89e7ff;
+  /* box-shadow: -2px 8px 15px #89e7ff; */
+   
+}
+
+/* Animação do gradiente */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  70% { background-position: 100% 50%; }
+  120% { background-position: 0% 50%; }
 }
 
 a {
@@ -53,7 +61,13 @@ a {
 }
 
 a:hover {
-  transform: translateY(-10px);
+  transform: translateY(-3px);
+}
+
+h1, h2 {
+  color: #4d7bac;
+  text-align: center;
+  padding: 8px 0;
 }
 
 h1, h2 {
@@ -62,13 +76,15 @@ h1, h2 {
 
 /* Escopo de navegação principal */
 .nav {
-  max-width: 1280px;
-  height: 70px;
+  max-width: 1790px;
+  height: 35px;
   margin-inline: auto;
+  margin-right: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-right: 22px;
+  font-family: 'Averta Regular', Arial, Helvetica, sans-serif;
 }
 
 /* Lista de navegação */
@@ -82,7 +98,7 @@ h1, h2 {
 
 /* Estilo dos links de navegação */
 .nav-list a {
-  font-size: 20px;
+  font-size: 15px;
   color: #e9e9e9;
   padding-block: 16px;
   font-weight: bold;
@@ -90,7 +106,7 @@ h1, h2 {
 
 /* Efeito hover nos links de navegação */
 .nav-list a:hover {
-  color: #333;
+  color: #bbc2cf;
   transition: 0.5s;
 }
 
@@ -101,10 +117,17 @@ p {
 
 /* Logo da FabLab */
 #logo_fab {
-  width: 140px;
-  height: 140px;
-  margin-top: 13px;
-  margin-left: -22px;
+  width: 70px;;
+  margin-top: 19px;
+  margin-left: 0;
+  padding-bottom: 6px;;
+  /* animation: flutuar 3s ease-in-out infinite; */
+ 
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 /* Criação do menu dropdown (menu suspenso) */
@@ -184,7 +207,7 @@ p {
 /* Container de conteúdo principal */
 .content-container {
   /* max-width: 1670px; */
-  margin: 0 50px 0 0;
+  margin: 35px 0px 0 0;
   padding: 0 20px;
 }
 
@@ -211,43 +234,138 @@ p {
 }
 
 #botao_flutuante {
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
 }
 
 /* Configuração do rodapé */
 #rodape {
-  box-sizing: border-box;
-  margin-top: 90px;
   background: linear-gradient(100deg, #383838, #0c0c0c);
-  color: #e9e9e9; 
-  padding: 2rem; 
-  text-align: center;
-  width: 100%;
+  color: #e9e9e9;
+  padding: 5px;
+  margin-top: 90px;
+  width: 100vw; /* Ocupa toda a largura da viewport */
+  margin-left: calc(-50vw + 50%); /* Centraliza corretamente */
+  position: relative;
+  left: 0;
 }
 
-
-/* Container flexível para o conteúdo */
-#rodape div {
+.conteudo_rodape {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 50px auto;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+  max-width: 100%; /* Alterado de 1280px para 100% */
+  padding: 0 20px; /* Adicione padding lateral */
+  box-sizing: border-box; /* Importante para cálculo correto */
 }
 
-/* Links sociais - espaçamento e tamanho responsivo */
+.footer-coluna {
+  flex: 1;
+  min-width: 200px; /* Largura mínima para evitar esmagamento */
+  margin-bottom: 1.5rem;
+}
+
+/* Logo da FIRJAN no rodapé */
+#logo_firjan {
+  width: 200px; /* Tamanho reduzido para melhor responsividade */
+  height: auto;
+  filter: brightness(0) invert(1);
+  margin: 0; /* Remove margens conflitantes */
+  transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+#logo_firjan:hover {
+  transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #e9e9e9;
+}
+
+.footer-links a:hover {
+  animation: pulsar-link 0.2s ease infinite alternate;
+  color: #4bbedb;
+}
+
+/* Keyframes para a animação dos "links rápidos" */
+@keyframes pulsar-link {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
 #social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   font-size: 1.5rem;
 }
 
-/* Texto do copyright - tamanho responsivo */
-#rodape p {
-  margin: 0;
-  font-size: clamp(0.9rem, 2vw, 1rem); /* Tamanho mínimo, ideal e máximo */
+#social-links a {
+  color: #e9e9e9;
+  transition: transform 0.3s;
+}
+
+#social-links a:hover {
+  transform: translateY(-3px);
+  color: #4bbedb;
+}
+
+.footer-base {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.5rem;
+}
+
+.logo-pequena {
+  width: 80px;
+  height: auto;
+}
+
+.texto_copyright {
+  display: inline-flex; /* Para alinhar texto e imagem */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 0.5rem; /* Espaço entre texto e logo */
+  font-size: clamp(0.8rem, 2vw, 1rem); /* Tamanho responsivo */
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  animation: pulsar 3s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes fadeRealceOut {
+  0% {
+    background-color: rgba(15, 134, 163, 0.1);
+    border-left-color: #333;
+  }
+  100% {
+    background-color: transparent;
+    border-left-color: transparent;
+  }
 }
 
 /* Ícones - tamanho e hover */
@@ -398,23 +516,81 @@ p {
     transform: translateY(0);
   }
 
-}
-
-/* Responsividade para até 1024px */
-@media (max-width: 1024px) {
-  .main_home {
-    padding: 20px 40px;
+  .conteudo_rodape {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
   }
 
-  #logo_fab {
-    position: relative;
-    left: 15px;
-    z-index: 100;
+  .footer-coluna {
+    min-width: 100%;
+  }
+
+  #social-links {
+    justify-content: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 }
 
 /* Responsividade para até 768px */
 @media (max-width: 768px) {
+  body, html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .main_home {
+    padding: 20px 30px;
+  }
+
+  #logo_fab {
+    position: relative;
+    left: 4px;
+    z-index: 100;
+  }
+
+  .nav-list {
+    gap: 30px;
+  }
+
+  #rodape {
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+
+  .conteudo_rodape {
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    align-items: center; /* Centraliza todo o conteúdo */
+    text-align: center;
+  }
+
+  #logo_firjan {
+    width: 150px; /* Tamanho menor para mobile */
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+  }
+
+  #social-links {
+    justify-content: center;
+  }
+
+  .texto_copyright {
+    flex-direction: column; /* Empilha texto e imagem em mobile */
+    gap: 0.3rem;
+  }
+  
+  .logo-pequena {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
   .main_home {
     padding: 20px 30px;
   }
@@ -433,10 +609,21 @@ p {
     padding: 1.5rem;
   }
 
-  #social-links {
-    gap: 1rem;
-    font-size: 1.3rem;
+  .conteudo_rodape {
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    align-items: center; /* Centraliza todo o conteúdo */
+    text-align: center;
   }
+
+  #logo_firjan {
+    width: 150px; /* Tamanho menor para mobile */
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+  }
+
+  #social-links {
+    justify-content: center;
+  }
+
 }
 
 /* Responsividade para até 480px */
@@ -459,16 +646,28 @@ p {
   }
 
   #rodape {
-    padding: 1rem;
-    margin-top: 60px;
+    padding: 1.5rem 1rem 0;
   }
 
-  #rodape div {
-    gap: 1rem;
+  #logo_firjan {
+    width: 120px; /* Tamanho ainda menor para telas muito pequenas */
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   #social-links {
-    font-size: 1.2rem;
+    justify-content: center;
+  }
+
+  .texto_copyright {
+    font-size: 0.7rem;
+  }
+  
+  .logo-pequena {
+    width: 40px;
   }
 }
 

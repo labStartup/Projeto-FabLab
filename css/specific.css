@@ -22,3 +22,77 @@
 .ident {
     text-indent: 22px;
   }
+
+/* Efeito de realce para seções alvo */
+section.fadeout {
+  animation: fadeRealceOut 6s ease forwards;
+}
+
+.card-ol {
+  margin-top: 1em;
+  margin-left: 3em;
+  margin-right: auto;
+  text-align: justify;
+  list-style-type: none;
+}
+
+.card-ol li {
+  background-color: #60cae6;
+  padding: 5px 10px;
+  margin: 3px 0;
+  border-radius: 15px 5px 20px;
+}
+
+/* Para classificar as tag a sem efeito */
+.sem-efeito:hover {
+  transform: none;
+}
+
+/* Identação de parágrafos */
+.ident {
+  text-indent: 22px;
+}
+
+/* Imagem da homepage */
+.img_home {
+padding: 20px;
+height: 500px;
+background: silver url('../img/img_fablab.jpg') no-repeat;
+background-size: cover;
+position: relative;
+}
+
+/* ----- Bloco para a caixa que está na imagem inicial da homepage */
+
+/* Conteiner do texto */
+.box-parag{
+width: 550px;
+background-color: rgb(217, 221, 93);
+opacity: 0.91;
+border-radius: 5px 40px 5px 40px;
+position: absolute;
+right: 50px;
+bottom: 50px;
+
+#titulo_intro{
+color: white;
+padding: 13px 4px 4px 0;
+text-align: center;
+}
+
+/* Estilizando o parágrafo de denro do conteiner */
+.card-p {
+color: rgb(65, 62, 62);
+text-align: end;
+padding: 0 20px 10px;
+font-size: 1em;
+}
+
+/* Estilizando o verdinho */
+.verdinho {
+color: rgb(58, 202, 58);
+
+}
+
+
+}

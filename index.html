@@ -7,6 +7,7 @@
   <title>Bem vindos ao FabLab!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <script defer src="js/index.js"></script>
   <link rel="stylesheet" href="css/style.css"/> 
   <link rel="stylesheet" href="css/specific.css">
 </head>
@@ -14,26 +15,39 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <img src="./img/logo_fablab_branco.png" alt="Símbolo do FabLab" id="logo_fab">
+      <img src="./img/logo_fablab_branco.png" alt="Símbolo do FabLab" id="logo_fab" loading="lazy">
       <button class="hamburger"></button>
       <ul class="nav-list">
         <li><a href="./index.html"><i class="fas fa-home"></i> Início</a></li>
         <li><a href="./projetos/index.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
         <li class="dropdown">
-          <a href="../areas/index.html"><i class="fas fa-th-large"></i> Áreas</a>
+          <a href="#" title="Selecione uma das áreas abaixo"><i class="fas fa-th-large"></i> Áreas</a>
           <ul class="dropdown-menu">
-            <li><a href="#"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
-            <li><a href="#"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
-            <li><a href="#"><i class="fas fa-paint-roller"></i> Acabamento e Marcenaria</a></li>
-            <li><a href="#"><i class="fas fa-lightbulb"></i> Espaço Maker</a></li>
+            <li><a href="areas/index.html#industria"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
+            <li><a href="areas/index.html#cnc"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
+            <li><a href="areas/index.html#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento e Marcenaria</a></li>
+            <li><a href="areas/index.html#digital_lab"><i class="fas fa-lightbulb"></i> Fabricação Digital</a></li>
           </ul>
         </li>
         <li><a href="#"><i class="fas fa-users"></i> Sobre nós</a></li>
       </ul>
     </nav>
   </header>
-  
+
   <button id="botao_flutuante" title="Voltar para o topo da página"></button>
+
+  <div class="img_home">
+    <div class="box-parag">
+      <h1 id="titulo_intro">Bem vindo ao <span class="verdinho">The 4.20 Lab</span></h1>
+      <p class="card-p">Em nosso Fab Lab oferecemos um espaço equipado com ferramentas de alta tecnologia para makers,
+        designers,
+        engenheiros, professores, estudantes e entusiastas. Aqui, você poderá prototipar, aprender e transformar suas
+        ideias em realidade.
+      <p class="card-p bold">Conheça nosso espaço e se surpreenda com as diversas possibilidades para transcorrer sua
+        criatividade!</p>
+      </p>
+    </div>
+  </div>
 
   <main class="main_home">
     <div class="content-container">
@@ -93,8 +107,7 @@
 </ol>
 
 <h2>Por que Escolher Nosso FabLab? 🙂</h2>
-<p class="ident">No nosso FabLab, você tem acesso a equipamentos de ponta como impressoras 3D e cortadoras a laser, em um ambiente seguro, climatizado e pronto para estimular sua criatividade. Faz parte de uma comunidade ativa de makers, ideal para trocar experiências e aprender com outros criadores. Além disso, contamos com suporte técnico especializado para te orientar em cada etapa do projeto. Promovemos eventos, workshops e oportunidades de networking para quem quer se conectar com pessoas criativas. E o melhor: tudo isso com preços acessíveis e pacotes flexíveis que se ajustam ao seu perfil. Venha fazer parte dessa rede e transforme suas ideias em realidade!</p>
-
+<p class="ident">No nosso <em>FabLab</em>, você tem acesso a equipamentos de ponta como impressoras 3D e cortadoras a laser, em um ambiente seguro, climatizado e pronto para estimular sua criatividade. Faz parte de uma comunidade ativa de makers, ideal para trocar experiências e aprender com outros criadores. Além disso, contamos com suporte técnico especializado para te orientar em cada etapa do projeto. Promovemos eventos, workshops e oportunidades de networking para quem quer se conectar com pessoas criativas. E o melhor: tudo isso com preços acessíveis e pacotes flexíveis que se ajustam ao seu perfil. Venha fazer parte dessa rede e transforme suas ideias em realidade!</p>
 
 <h2>Agende uma Visita ou Participe de um Workshop!</h2>
 <p>
@@ -115,29 +128,47 @@
 <h2>Últimos Projetos da Comunidade</h2>
 <p>(Aqui podemos colocar fotos que tirarmos no FabLab dos projetos concluídos, o que tiver disponível - e o link para a página de projetos)</p>
 
-
 <h2>Junte-se à Nossa Comunidade Maker!</h2>
 <p>
   Siga-nos nas redes sociais e fique por dentro das novidades:
   [ícones para redes sociais: Instagram, Facebook, LinkedIn, Youtube]
 </p>
 
-
-
 <h3>Transforme ideias em realidade. Venha fazer parte do The 4.20 Lab! 🎉</h3>
   </main>
 
   <footer id="rodape">
-    <div>
-      <p>© 2025 FabLab</p>
-      <div id="social-links">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>        
+    <div class="conteudo_rodape">
+      <!-- Logo da Firjan à esquerda -->
+      <div class="footer-coluna">
+        <a href="https://firjan.com.br/pagina-inicial.htm" target="_blank"><img src="img/logo_firjan.png" alt="Logo FIRJAN" id="logo_firjan" loading="lazy" title="Ir ao site da FIRJAN"></a>
+      </div>
+  
+      <!-- Links rápidos-->
+      <div class="footer-coluna">
+        <h3>Links Rápidos</h3><br>
+        <ul class="footer-links">
+          <li><a href="./index.html" class="sem-efeito">Início</a></li>
+          <li><a href="./projetos/index.html" class="sem-efeito">Projetos</a></li>
+          <li><a href="#" class="sem-efeito">Sobre Nós</a></li>
+        </ul>
+      </div>
+  
+      <!-- Redes sociais do rodapé -->
+      <div class="footer-coluna">
+        <h3>Redes Sociais</h3><br>
+        <div id="social-links">
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
       </div>
     </div>
+  
+    <!-- Rodapé inferior -->
+    <div class="footer-base">
+      <span class="texto_copyright">&copy; 2025 FabLaB. Todos os direitos reservados. <img src="img/logo_fablab_azul2.png" alt="Logo FabLab" class="logo-pequena texto_copy"></span> 
+    </div>
   </footer>
-
-
-<script src="js/index.js"></script>
 </body>
 </html>
