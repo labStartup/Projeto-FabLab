@@ -22,12 +22,6 @@
   padding: 0;
 }
 
-/* Estilo padrão para imagens */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Estilização do corpo da página */
 body {
   font-family: 'Averta Regular', Arial, Helvetica, sans-serif;
@@ -52,11 +46,6 @@ body {
   box-shadow: -2px 8px 15px #89e7ff;
 }
 
-/* Identação de parágrafos */
-.ident {
-  text-indent: 22px;
-}
-
 a {
   text-decoration: none;
   display: inline-block;
@@ -67,8 +56,8 @@ a:hover {
   transform: translateY(-10px);
 }
 
-h2 {
-  margin-top: 1em;
+h1, h2 {
+  color: #4d7bac
 }
 
 /* Escopo de navegação principal */
@@ -108,21 +97,6 @@ h2 {
 p {
   font-size: 1.2em;
   text-align: justify;
-}
-
-ol {
-  margin-top: 1em;
-  margin-left: 3em;
-  margin-right: auto;
-  text-align: justify;
-  list-style-type: none;
-}
-
-ol li {
-  background-color: #4bbedb;
-  padding: 5px 10px;
-  margin: 3px 0;
-  border-radius: 15px 5px 20px;
 }
 
 /* Logo da FabLab */

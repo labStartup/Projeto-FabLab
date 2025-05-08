@@ -1,0 +1,24 @@
+.card-ol {
+    margin-top: 1em;
+    margin-left: 3em;
+    margin-right: auto;
+    text-align: justify;
+    list-style-type: none;
+  }
+  
+.card-ol li {
+    background-color: #60cae6;
+    padding: 5px 10px;
+    margin: 3px 0;
+    border-radius: 15px 5px 20px;
+  }
+
+  /* Para classificar as tag a sem efeito */
+.sem-efeito:hover {
+    transform: none;
+  }
+
+  /* Identação de parágrafos */
+.ident {
+    text-indent: 22px;
+  }
