@@ -73,6 +73,7 @@ border-radius: 5px 40px 5px 40px;
 position: absolute;
 right: 50px;
 bottom: 50px;
+}
 
 #titulo_intro{
 color: white;
@@ -93,6 +94,11 @@ font-size: 1em;
 color: rgb(58, 202, 58);
 
 }
+
+.h1_center {
+  text-align: center;
+}
+
 
 
 }
