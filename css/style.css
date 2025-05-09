@@ -223,11 +223,26 @@ p {
   transition: 0.3s;
 }
 
-
 /* Estiliazando o main -> conteúdo */
 .content-container {
   margin: 12px 0 50px 0;
 }
+
+/* Configurando os ol para que fiquem identados */
+.content-container ul {
+  margin: 5px 0 auto 50px;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 10px auto;
+}
+
+.content-container ul ::marker {
+  color: #55b9d4; /* Define a cor azul */
+  font-weight: bold; /* Opcional: para deixar o marcador em negrito */
+  font-size: 1.6em; /* Opcional: para aumentar o tamanho do marcador */
+  
+}
+
 
 #botao_flutuante {
   opacity: 0;

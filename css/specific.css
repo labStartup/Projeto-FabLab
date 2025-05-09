@@ -62,6 +62,33 @@ background-size: cover;
 position: relative;
 }
 
+/* Configurando a id pulsante */
+#pulsante {
+  font-family: monospace ,'Courier New', Courier;
+  font-size: 23px;
+  font-weight: bold;
+  animation: pulsar 0.8s infinite ease-in-out;  
+   transform-origin: center;  
+}
+
+/* Configurando keyframe para pulsar */
+@keyframes pulsar {
+  0% { 
+    transform: scale(1); opacity: 0.8;
+  }
+  50% { 
+    transform: scale(1.05); opacity: 1;
+    color: #c7d323;    
+    padding: 10px; 
+  }
+  100% { 
+    transform: scale(5); opacity: 0.8; 
+    color: #b65b10;
+    padding: 0;
+  }
+}
+
+
 /* ----- Bloco para a caixa que está na imagem inicial da homepage */
 
 /* Conteiner do texto */
@@ -71,31 +98,27 @@ background-color: rgba(44, 51, 51, 0.651);
 /* opacity: 0.91; */
 /* border-radius: 5px 40px 5px 40px; */
 position: absolute;
-<<<<<<< HEAD
 left: 140px;
 bottom: 60px;
 border-radius: 4px;
-=======
-right: 50px;
-bottom: 50px;
 }
->>>>>>> staging
 
 #titulo_intro{
 color: white;
 font-size: 4em;
 /* padding: 13px 4px 4px 0; */
-padding-left: 6%;
+padding-left: 0;
 text-align: center;
 }
 
 
 /* Estilizando o parágrafo de dentro do conteiner */
 .card-p {
-color: rgb(223, 223, 223);
-text-align: justify;
-padding: 0 20px 10px 40px;
-font-size: 17.3px;
+  color: rgb(223, 223, 223);
+  text-align: justify;
+  padding: 10px 40px 10px 37px;
+  font-size: 17.3px;
+  
 }
 
 /* Estilizando o verdinho */
@@ -105,7 +128,6 @@ color: #55b9d4;
 
 }
 
-<<<<<<< HEAD
 .caixa2 {
   width: 570px;
   height: 8px;
@@ -113,14 +135,6 @@ color: #55b9d4;
   animation: gradient 1s ease infinite;
   /* opacity: 0.95; */
   border-radius: 4px;
-=======
-.h1_center {
-  text-align: center;
-}
-
-
-
->>>>>>> staging
 }
 
 @keyframes gradient {
@@ -129,5 +143,9 @@ color: #55b9d4;
   120% { background-position: 0% 50%; }
 }
 
-
+/* Mensagem final da homepage */
+.final-msg {
+  text-align: center;
+  font-size: 32px;
+  margin: 30px 0 0;
 }
