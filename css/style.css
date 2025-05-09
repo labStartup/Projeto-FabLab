@@ -34,7 +34,7 @@ body {
 .header {
   background: radial-gradient(circle at center, #1a81db, #432fc7);
   background-size: 200% 200%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 17s ease infinite;
   padding-inline: 15px;
   padding-bottom: 9px;
   padding-left: 30px;
@@ -66,12 +66,16 @@ a:hover {
 
 h1, h2 {
   color: #4d7bac;
-  text-align: center;
   padding: 8px 0;
 }
 
-h1, h2 {
-  color: #4d7bac
+/* Estilo da seção principal */
+.main_home {
+  padding: 25px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Escopo de navegação principal */
@@ -111,8 +115,10 @@ h1, h2 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 20px;
   text-align: justify;
+  line-height: 29px;;
+
 }
 
 /* Logo da FabLab */
@@ -120,8 +126,8 @@ p {
   width: 70px;;
   margin-top: 19px;
   margin-left: 0;
-  padding-bottom: 6px;;
-  /* animation: flutuar 3s ease-in-out infinite; */
+  padding-bottom: 2px;;
+  animation: flutuar 3s ease-in-out infinite;
  
 }
 
@@ -195,22 +201,6 @@ p {
   transform: rotate(180deg);
 }
 
-/* Estilo da seção principal */
-.main_home {
-  margin-top: 80px;
-  padding: 20px;
-  color: #333;
-  line-height: 1.6;
-  width: 100%;
-}
-
-/* Container de conteúdo principal */
-.content-container {
-  /* max-width: 1670px; */
-  margin: 35px 0px 0 0;
-  padding: 0 20px;
-}
-
 /* Botão de menu hambúrguer para dispositivos móveis */
 .hamburger {
   display: none;
@@ -231,6 +221,12 @@ p {
   margin-top: 5px;
   position: relative;
   transition: 0.3s;
+}
+
+
+/* Estiliazando o main -> conteúdo */
+.content-container {
+  margin: 12px 0 50px 0;
 }
 
 #botao_flutuante {
@@ -399,7 +395,7 @@ p {
     left: 0;
     width: 100vw;
     height: 105vh;
-    background: linear-gradient(70deg, #1e88e5, #3ca7c2, #0a69bd);
+    background: linear-gradient(70deg, #1e88e5, #3ca7c2, #432fc7);
     background-size: 250% 100%;
     animation: gradient 20s ease infinite;
     clip-path: circle(100px at 90% -15%);
@@ -737,24 +733,3 @@ p {
   70% { box-shadow: 0 0 0 15px rgba(75, 190, 219, 0); }
   100% { box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); }
 }
-
-
-/* Conteúdo de exemplo para demonstrar a rolagem */
-/* body {
-  height: 3000px;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-} */
-
-/* Criando div para estilizar em caixa */
-/*
-.lista {
-  width: 500px;
-  height: 100px;
-  background-color: rebeccapurple;
-  margin: 10px auto;
-  border-radius: 10px;
-  text-align: justify;
-  color: white;
-  padding: 10px
-} */

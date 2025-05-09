@@ -71,9 +71,15 @@ background-color: rgba(44, 51, 51, 0.651);
 /* opacity: 0.91; */
 /* border-radius: 5px 40px 5px 40px; */
 position: absolute;
+<<<<<<< HEAD
 left: 140px;
 bottom: 60px;
 border-radius: 4px;
+=======
+right: 50px;
+bottom: 50px;
+}
+>>>>>>> staging
 
 #titulo_intro{
 color: white;
@@ -99,6 +105,7 @@ color: #55b9d4;
 
 }
 
+<<<<<<< HEAD
 .caixa2 {
   width: 570px;
   height: 8px;
@@ -106,6 +113,14 @@ color: #55b9d4;
   animation: gradient 1s ease infinite;
   /* opacity: 0.95; */
   border-radius: 4px;
+=======
+.h1_center {
+  text-align: center;
+}
+
+
+
+>>>>>>> staging
 }
 
 @keyframes gradient {
