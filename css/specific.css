@@ -131,8 +131,7 @@ color: #55b9d4;
 .caixa2 {
   width: 570px;
   height: 8px;
-  background-color: radial-gradient(circle at center, #1a81db, #432fc7);
-  animation: gradient 1s ease infinite;
+  background-color: #3fa0d87a;
   /* opacity: 0.95; */
   border-radius: 4px;
 }
