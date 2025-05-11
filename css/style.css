@@ -18,10 +18,13 @@
 /* Estilização do corpo da página */
 body {
   font-family: 'Averta Regular', Arial, Helvetica, sans-serif;
-  background-color: #d9dfe0;
+  background: linear-gradient(30deg, #2b4561, #5e99d8);
   text-align: justify;
   font-size: 20;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Definindo classe bold para texto averta bold */
@@ -30,7 +33,7 @@ body {
   font-weight: bold;
 }
 
-/* Cabeçalho fixo */
+/* Cabeçalho */
 .header {
   background: radial-gradient(circle at center, #432fc7, #00308a, #1a81db);
   background-size: 200% 200%;
@@ -43,7 +46,6 @@ body {
   left: 0;
   width: 100%;
   z-index: 100;
-  /* box-shadow: -2px 8px 15px #89e7ff; */
 }
 
 /* Animação do gradiente */
@@ -190,16 +192,17 @@ p {
 }
 
 /* Estilo da seção principal */
-.main_home {
-  margin-top: 30px;
-  padding: 36px;
+main {
+  padding: 35px 35px 160px 35px;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.9;
   max-width: 900px;
   margin: auto;
+  background-color: aliceblue;
+  flex: 1;
 }
 
-.main_home h1, h2{
+.main_home h1, h2 {
   line-height: 40px;
 }
 /* Container de conteúdo principal */
@@ -249,6 +252,7 @@ p {
   margin-left: calc(-50vw + 50%); 
   position: relative;
   left: 0;
+  bottom: 0; /* Garante que o rodapé grude no fundo */
 }
 
 .conteudo_rodape {
@@ -267,6 +271,7 @@ p {
   flex: 1;
   min-width: 200px; 
   margin-bottom: 1rem;
+  /* border-right: #7e7e7e 1px solid; */
 }
 
 .footer-base {
@@ -276,10 +281,10 @@ p {
 
 /* Logo da FIRJAN no rodapé */
 #logo_firjan {
-  width: 160px; 
+  width: 210px; 
   height: auto;
   filter: brightness(0) invert(1);
-  margin: 0 0 0 25px; 
+  margin: 50px 0 0 25px; 
   transition: transform 0.3s ease; 
 }
 
@@ -324,18 +329,20 @@ p {
 
 #social-links a {
   color: #e9e9e9;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
 
 #social-links a:hover {
   transform: translateY(-3px);
 }
 
+/* Configarações do rodapé inferior */
 .footer-base {
   text-align: center;
   padding: 1rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 1.5rem;
+  height: inherit;
 }
 
 .logo-pequena {
@@ -471,7 +478,6 @@ p {
   height: 100%;
   position: relative;
   flex-shrink: 0;
-  
 }
 
 .slide img {
@@ -480,6 +486,23 @@ p {
   object-fit: cover;
   display: block;
   transition: all 0.3s ease;
+}
+
+.slide-message {
+  position: absolute;
+  top: 10px;
+  left: 10px; 
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  opacity: 1; /* Mostra a mensagem inicialmente */
+  transition: opacity 0.5s ease; /* Transição suave para mostrar/esconder */
+}
+
+.slide:hover .slide-message {
+  opacity: 0; 
 }
 
 .slide-caption {
@@ -491,8 +514,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #d9dfe0;
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1.4rem;
+  font-family: monospace;
   font-weight: bold;
   text-align: center;
   padding: 20px;
@@ -502,6 +526,41 @@ p {
   transition: opacity 0.3s ease;
   pointer-events: none;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+.slide:hover .slide-caption {
+  opacity: 1;
+}
+
+/* Adicione isso na seção de configurações do slide */
+.slide::before {
+  content: "Passe o mouse na imagem ou clique";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.705);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  z-index: 5;
+  animation: fadeInOut 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.slide:hover::before {
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .slide:hover .slide-caption {
@@ -594,4 +653,15 @@ p {
 #radio5:checked ~ .navigation-auto .auto-btn5,
 #radio6:checked ~ .navigation-auto .auto-btn6 {
   background-color: rgb(0, 0, 0);
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
 }

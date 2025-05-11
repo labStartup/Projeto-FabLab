@@ -5,13 +5,6 @@
     text-align: justify;
     list-style-type: none;
   }
-  
-.card-ol li {
-    background-color: #60cae6;
-    padding: 5px 10px;
-    margin: 3px 0;
-    border-radius: 15px 5px 20px;
-  }
 
   /* Para classificar as tag a sem efeito */
 .sem-efeito:hover {
@@ -53,19 +46,58 @@ section.fadeout {
   text-indent: 22px;
 }
 
-/* Imagem da homepage */
 .img_home {
-  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
   height: auto;
   min-height: 500px;
+  padding: 20px;
+  box-shadow: -1px 4px 18px black;
+}
+
+.img-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca o slider atrás do conteúdo */
+}
+
+.slide-topo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-topo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-topo.active {
+  opacity: 1;
+}
+
+/* Imagem da homepage 
+.img_home {
+  height: auto;
+  min-height: 500px;
+  padding: 20px;
   background: silver url('../img/img_fablab.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: left;
-}
-
+}*/
 
 /* Container do texto */
 .box-parag {
@@ -95,8 +127,21 @@ section.fadeout {
 #texto-digitacao {
   white-space: nowrap; /* Impede quebra de linha */
   overflow: hidden; /* Garante que o texto fique escondido inicialmente */
-  border-right: .25em solid #55b9d4; /* Efeito cursor */
+  border-right: .15em solid #55b9d4; /* Efeito cursor */
   padding-right: 0.1em;
+  animation: typing 4s steps(40, end), blink-caret 1s step-end infinite; /* Cursor pisca */
+}
+
+/* Digitação */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Cursor pisca */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: aliceblue; }
 }
 
 /* Estilizando o parágrafo de dentro do container */
@@ -173,89 +218,3 @@ section.fadeout {
   120% { background-position: 0% 50%; }
 }
 
-/* Estilo da página projetos */
-
-/* Imagem da homepage */
-#img_project {
-  padding: 20px;
-  height: auto;
-  min-height: 500px;
-  background: silver url('../img/project.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: left;  
-}
-
-/* Definindo um título geral para todas as páginas */
-#titulo_geral {
-  /* font-family: monospace,'Courier New', Courier ; */
-  display: block;
-  color: #00FF99;
-  font-size: 2em;
-  padding: 0;
-  text-align: center;
-  margin-bottom: 15px;    
-}
-
-.img_project > .box-parag {
-    min-width: 100%;
-    margin-bottom: 30px;
-  }
-
-/* Definindo background-color mais escuro */
-.escuro {
-  background-color: rgba(20, 20, 20, 0.884);
-}
-
-/* Configuração de responsividade */
-@media (max-width: 768px) {
-  .img_project {
-    min-height: 400px;
-    padding: 10px;
-  }
-  
-  #titulo_geral {
-    font-size: 2em;
-  } 
-  
-
-}
-
-  @media (max-width: 480px) {
-  .img_project {
-    min-height: 300px;
-  }
-
-  #titulo_geral {
-    font-size: 1.2em;
-  }
-  
-}
-
-.typing {
-  white-space: nowrap; /* Impede quebra de linha */
-  overflow: hidden; /* Garante que o texto fique escondido inicialmente */
-  /* width: 0; */
-  animation: type 2s steps(25, end) 0s forwards, blink 0.5s step-end 1 0s;  
-}
-
-
-/* Configurando media query type e blink */
-@keyframes type {
-   from {
-      width: 0;
-       border-right: 3px solid #00FF99;
-    }
-   to {
-      width: 25ch;
-      border-right: 3px solid transparent;
-  }
-}
-
-@keyframes blink {
-  50%{
-    border-color: transparent;
-  }
-}

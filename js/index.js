@@ -1,122 +1,162 @@
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.nav');
-const dropdownToggle = document.querySelector('.dropdown > a');
-const btnFlutuante = document.querySelector('#botao_flutuante');
+const menuHamburguer = document.querySelector('.hamburger');
+const navegacao = document.querySelector('.nav');
+const alternarDropdown = document.querySelector('.dropdown > a');
+const botaoFlutuante = document.querySelector('#botao_flutuante');
 
 // Menu Hamburguer 
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
+menuHamburguer.addEventListener('click', () => {
+    navegacao.classList.toggle('active');
     
     // Sempre esconde o botão ao abrir/fechar o menu
-    btnFlutuante.style.opacity = '0';
-    btnFlutuante.style.visibility = 'hidden';
+    botaoFlutuante.style.opacity = '0';
+    botaoFlutuante.style.visibility = 'hidden';
     
     // Só mostra o botão novamente se estiver rolado e após 500ms
-    if (!nav.classList.contains('active')) {
+    if (!navegacao.classList.contains('active')) {
         setTimeout(() => {
             if (window.scrollY > 200) {
-                btnFlutuante.style.opacity = '1';
-                btnFlutuante.style.visibility = 'visible';
-                btnFlutuante.style.transform = 'translateY(0)';
+                botaoFlutuante.style.opacity = '1';
+                botaoFlutuante.style.visibility = 'visible';
+                botaoFlutuante.style.transform = 'translateY(0)';
             }
         }, 500);
     }
 });
 
 // Dropdown no modo mobile
-dropdownToggle.addEventListener('click', function(e) {
+alternarDropdown.addEventListener('click', function(e) {
+    // Impede o comportamento padrão do link se estiver no modo mobile
     if (window.innerWidth <= 750) {
         e.preventDefault();
+        // Alterna a classe 'active' no elemento pai (li) para mostrar/esconder o dropdown
         this.parentElement.classList.toggle('active');
     }
 });
 
 // Realce de seção ao clicar no link
-function highlightSection(targetId) {
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.remove('fadeout');
+function realcarSecao(idAlvo) {
+    const secaoAlvo = document.getElementById(idAlvo);
+    if (secaoAlvo) {
+        // Remove a classe 'fadeout' de todas as seções
+        document.querySelectorAll('section').forEach(secao => {
+            secao.classList.remove('fadeout');
         });
-        targetSection.classList.add('fadeout');
-        setTimeout(() => targetSection.classList.remove('fadeout'), 6000);
+        secaoAlvo.classList.add('fadeout');
+        setTimeout(() => secaoAlvo.classList.remove('fadeout'), 6000);
     }
 }
 
-// Tratamento de links com hash
+// Tratamento de links com hash na URL
 if (window.location.hash) {
-    highlightSection(window.location.hash.substring(1));
+    // Chama a função para realçar a seção correspondente ao hash
+    realcarSecao(window.location.hash.substring(1));
 }
 
+// Adiciona event listeners para links no menu dropdown
 document.querySelectorAll('.dropdown-menu a').forEach(link => {
     link.addEventListener('click', function(event) {
-        highlightSection(this.getAttribute('href').substring(1));
+        // Chama a função para realçar a seção ao clicar no link
+        realcarSecao(this.getAttribute('href').substring(1));
     });
 });
   
-// Botão flutuante
-btnFlutuante.addEventListener('click', () => {
+// Botão flutuante para voltar ao topo
+botaoFlutuante.addEventListener('click', () => {
+    // Rola suavemente para o topo da página
     window.scroll({ top: 0, behavior: 'smooth' });
 });
 
-// Controle de rolagem
+// Controle de rolagem da página
 window.addEventListener('scroll', () => {
-    if (!nav.classList.contains('active')) {
+    // Verifica se o menu não está ativo (aberto)
+    if (!navegacao.classList.contains('active')) {
+        // Se a página tem uma rolagem de mais de 200 pixels
         if (window.scrollY > 200) {
-            btnFlutuante.style.opacity = '1';
-            btnFlutuante.style.visibility = 'visible';
-            btnFlutuante.style.transform = 'translateY(0)';
+            // Mostra o botão flutuante
+            botaoFlutuante.style.opacity = '1';
+            botaoFlutuante.style.visibility = 'visible';
+            botaoFlutuante.style.transform = 'translateY(0)';
         } else {
-            btnFlutuante.style.opacity = '0';
-            btnFlutuante.style.visibility = 'hidden';
-            btnFlutuante.style.transform = 'translateY(20px)';
+            // Esconde o botão flutuante
+            botaoFlutuante.style.opacity = '0';
+            botaoFlutuante.style.visibility = 'hidden';
+            botaoFlutuante.style.transform = 'translateY(20px)';
         }
     }
 })
 
+// Evento disparado quando o DOM está completamente carregado
 document.addEventListener('DOMContentLoaded', function() {
-    const typingTextElement = document.getElementById('texto-digitacao');
+    const elementoTextoDigitacao = document.getElementById('texto-digitacao');
     const tituloIntro = document.getElementById('titulo_intro');
-    const fullText = tituloIntro.getAttribute('data-text');
-    let charIndex = 0;
-    let isDeleting = false;
+    const textoCompleto = tituloIntro.getAttribute('data-text');
+    let indiceCaracter = 0;
+    let estaApagando = false;
 
-    function type() {
-        if (charIndex < fullText.length && !isDeleting) {
-            typingTextElement.innerHTML += fullText.charAt(charIndex);
-            charIndex++;
-            setTimeout(type, 80);
+    // Função para simular o efeito de digitação
+    function digitar() {
+        // Se ainda há caracteres para digitar e não estamos "apagando"
+        if (indiceCaracter < textoCompleto.length && !estaApagando) {
+            elementoTextoDigitacao.innerHTML += textoCompleto.charAt(indiceCaracter); // Adiciona o próximo caractere
+            indiceCaracter++; // Incrementa o índice
+            setTimeout(digitar, 120); // Chama a função novamente após o tempo estimado
         } else {
-            setTimeout(resetText, 1500); // Aguarda 1.5 segundos antes de reiniciar
+            setTimeout(resetarTexto, 15000); // Chama a função para resetar o texto após o tempo estimado
         }
     }
 
-    function resetText() {
-        charIndex = 0;
-        typingTextElement.innerHTML = ''; // Limpa o texto
-        type(); // Reinicia a digitação
+    // Função para resetar o texto
+    function resetarTexto() {
+        indiceCaracter = 0;
+        elementoTextoDigitacao.innerHTML = '' // Limpa o texto
+        digitar(); // Reinicia o efeito de digitação
     }
 
-    type();
+    digitar(); // Inicia o efeito de digitação
 });
-/* ===================================== Configurações do slide ================================== */
 
+/* ===================================== Configurações de slides ================================== */
+
+// Slide do escopo principal
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.slide img');
-    const radios = document.querySelectorAll('input[name="radio-btn"]');
+    const imagens = document.querySelectorAll('.slide img');
+    const botoesRadio = document.querySelectorAll('input[name="radio-btn"]');
 
-    images.forEach(img => {
+    // Adiciona um event listener para cada imagem do slide
+    imagens.forEach(img => {
         img.addEventListener('click', () => {
-            let currentRadio = document.querySelector('input[name="radio-btn"]:checked');
-            let nextRadio;
+            let botaoRadioAtual = document.querySelector('input[name="radio-btn"]:checked');
+            let proximoBotaoRadio;
 
-            for (let i = 0; i < radios.length; i++) {
-                if (radios[i] === currentRadio) {
-                    nextRadio = radios[i + 1] || radios[0]; // Avança para o próximo ou volta para o primeiro
+            // Encontra o próximo botão de rádio na sequência
+            for (let i = 0; i < botoesRadio.length; i++) {
+                if (botoesRadio[i] === botaoRadioAtual) {
+                    proximoBotaoRadio = botoesRadio[i + 1] || botoesRadio[0] // Avança para o próximo ou volta para o primeiro
                     break;
                 }
             }
-            nextRadio.checked = true;
-        });
-    });
-});
+            proximoBotaoRadio.checked = true; // Seleciona o próximo botão de rádio
+        })
+    })
+})
+
+// Slide do topo
+document.addEventListener('DOMContentLoaded', function() {
+    const slidesTopo = document.querySelectorAll('.slide-topo');
+    let slideAtual = 0;
+
+    // Função para mostrar o slide atual
+    function mostrarSlide() {
+        slidesTopo.forEach(slide => slide.classList.remove('active')) // Remove 'active' de todos os slides
+        slidesTopo[slideAtual].classList.add('active') // Adiciona 'active' ao slide atual
+    }
+
+    // Função para avançar para o próximo slide
+    function proximoSlide() {
+        slideAtual = (slideAtual + 1) % slidesTopo.length // Calcula o índice do próximo slide
+        mostrarSlide() // Mostra o próximo slide
+    }
+
+    mostrarSlide() // Mostra o primeiro slide
+    setInterval(proximoSlide, 5000) // Inicia a troca automática de slides a cada tempo escolhido
+})
