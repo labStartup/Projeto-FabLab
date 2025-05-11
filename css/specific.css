@@ -218,3 +218,93 @@ section.fadeout {
   120% { background-position: 0% 50%; }
 }
 
+/* Estilo da página projetos */
+
+/* Imagem da homepage */
+#img_project {
+  padding: 20px;
+  height: auto;
+  min-height: 500px;
+  background: silver url('../img/project.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;  
+}
+
+#img_project > .box-parag{
+  width: auto;
+}
+
+/* Definindo um título geral para todas as páginas */
+#titulo_geral {
+  /* font-family: monospace,'Courier New', Courier ; */
+  display: block;
+  color: #00FF99;
+  font-size: 2em;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 15px;    
+}
+
+.img_project > .box-parag {
+    min-width: 100%;
+    margin-bottom: 30px;
+  }
+
+/* Definindo background-color mais escuro */
+.escuro {
+  background-color: rgba(20, 20, 20, 0.884);
+}
+
+/* Configuração de responsividade */
+@media (max-width: 768px) {
+  .img_project {
+    min-height: 400px;
+    padding: 10px;
+  }
+  
+  #titulo_geral {
+    font-size: 2em;
+  } 
+  
+
+}
+
+  @media (max-width: 480px) {
+  .img_project {
+    min-height: 300px;
+  }
+
+  #titulo_geral {
+    font-size: 1.2em;
+  }
+  
+}
+
+.typing {
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Garante que o texto fique escondido inicialmente */
+  /* width: 0; */
+  animation: type 2s steps(25, end) 0s forwards, blink 0.5s step-end 1 0s;  
+}
+
+
+/* Configurando media query type e blink */
+@keyframes type {
+   from {
+      width: 0;
+       border-right: 3px solid #00FF99;
+    }
+   to {
+      width: 20ch;
+      border-right: 3px solid transparent;
+  }
+}
+
+@keyframes blink {
+  50%{
+    border-color: transparent;
+  }
+}
