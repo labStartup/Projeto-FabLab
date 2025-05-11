@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,34 +13,75 @@
 
     <title>Sobre nós</title>
 </head>
+
 <body>
+
     <body>
-    <header class="header">
-        <nav class="nav">
-            <img src="../img/logo_fablab_branco.png" alt="Símbolo do FabLab" id="logo_fab">
-            <button class="hamburger"></button>
-            <ul class="nav-list">
-                <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
-                <li><a href="./index.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
-                <li class="dropdown">
-                    <a href="#"><i class="fas fa-th-large" title="Selecione uma das áreas abaixo"></i> Áreas</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../areas/index.html#industria"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
-                        <li><a href="../areas/index.html#cnc"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
-                        <li><a href="../areas/index.html#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
-                        <li><a href="../areas/index.html#digital_lab"><i class="fas fa-lightbulb"></i> Fabricação Digital</a></li>
-                    </ul>
-                </li>
-                <li><a href="../sobre/index.html"><i class="fas fa-users"></i> Sobre nós</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header class="header">
+            <nav class="nav">
+                <img src="../img/logo_fablab_branco.png" alt="Símbolo do FabLab" id="logo_fab">
+                <button class="hamburger"></button>
+                <ul class="nav-list">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="./index.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-th-large" title="Selecione uma das áreas abaixo"></i> Áreas</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../areas/index.html#industria"><i class="fas fa-industry"></i> Indústria
+                                    4.0</a></li>
+                            <li><a href="../areas/index.html#cnc"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
+                            <li><a href="../areas/index.html#marcenaria"><i class="fas fa-paint-roller"></i>
+                                    Acabamento<br>e Marcenaria</a></li>
+                            <li><a href="../areas/index.html#digital_lab"><i class="fas fa-lightbulb"></i> Fabricação
+                                    Digital</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../sobre/index.html"><i class="fas fa-users"></i> Sobre nós</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <button id="botao_flutuante" title="Voltar para o topo da página"></button>
+        <button id="botao_flutuante" title="Voltar para o topo da página"></button>
 
-    <div class="img_home">
-        
-    </div>
+        <!-- <section>
+            <div class="form-container">
+                <h2>SOBRE NÓS</h2>
+                <p>Este website foi desenvolvido em equipe da turma TEC*******, de Desenvolvimento de Sistemas, da Unidade Benfica do Instituto SENAI de Tecnologia e Automação.
+                </p>                
+            </div>
+        </section>
+         -->
 
-</body>
+
+
+
+
+
+        <!-- Criando uma seção para o formulário de contato -->
+        <section>
+            <div class="form-container">
+                <h2>INSCREVA-SE PARA RECEBER ATUALIZAÇÕES SOBRE NOSSO FABLAB</h2>
+                <p>Não perca as últimas novidades no Universo Maker!
+                </p>
+                <!-- Criando o form -->
+                <form> Para criar um formúlario
+                    <input id="name" name="name" type="text" placeholder="Nome">
+                    <input id="email" name="email" type="text" placeholder="Email">
+
+                    <!-- Select -> option para criar uma caixa de seleção -->
+                    <select name="place">
+                        <option value="aluno">Aluno</option>
+                        <option value="palest">Palestrante</option>
+                        <option value="vist">Visitante</option>
+                        <option value="loc">Locação</option>
+                    </select>
+                    <!-- Como o botão submit de input não possui fechamento, vamos colocar o valor que será exibido no atributo value. -->
+                    <input type="submit" value="INSCREVA-SE">
+
+                </form>
+            </div>
+        </section>
+
+    </body>
+
 </html>
