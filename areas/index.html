@@ -5,10 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Áreas</title>
+    <script defer src="js/index.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script defer src="../js/index.js"></script>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script defer src="../js/index.js"></script>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/specific.css">
+    <link rel="stylesheet" href="../css/responsividades.css">
+    <style>
+        /* Temporário */
+
+        body {
+            background: linear-gradient(30deg, #4d7bac, #2b4561);
+        }
+
+        section p {
+            text-indent: 28px;
+        }
+
+        section h1 {
+            background-color: #4d7bac;
+            border-radius: 15px;
+            color: aliceblue;
+        }
+
+        section h2 {
+            text-align: left;
+            font-size: larger;
+        }
+
+        main {
+            background-color: aliceblue;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,11 +49,11 @@
                 <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
                 <li><a href="../projetos/index.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
                 <li class="dropdown">
-                    <a href="../areas/index.html"><i class="fas fa-th-large"></i> Áreas</a>
+                    <a href="#"><i class="fas fa-th-large"></i> Áreas</a>
                     <ul class="dropdown-menu">
                         <li><a href="#industria"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
                         <li><a href="#cnc"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
-                        <li><a href="#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento e Marcenaria</a></li>
+                        <li><a href="#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
                         <li><a href="#digital-lab"><i class="fas fa-lightbulb"></i>Fabricação Digital</a></li>
                     </ul>
                 </li>
@@ -36,8 +65,8 @@
     <button id="botao_flutuante" title="Voltar para o topo da página"></button>
 
     <main class="main_home">
-        <section class="content-container">
-            <h1 id="industria">Indústria 4.0</h1>
+        <section id="industria">
+            <h1>Indústria 4.0</h1>
             <p>
                 Onde a revolução industrial encontra a criatividade sem limites
 
@@ -59,11 +88,7 @@
                 desperdício.
             </p>
 
-
-
             <h2>Impacto da Indústria 4.0:</h2>
-
-
             <p>
                 A Indústria 4.0 está transformando a produção industrial de diversas maneiras, trazendo benefícios como:
 
@@ -99,11 +124,11 @@
             </p>
         </section>
 
-        <section>
-            <h1 id="marcenaria">Marcenaria</h1>
+        <section id="marcenaria">
+            <h1>Marcenaria</h1>
 
             <p>
-                A área de Marcenaria do FabLab SENAI é um espaço onde a tradição do trabalho manual encontra a inovação
+                A área de Marcenaria do <strong>FabLab SENAI</strong> é um espaço onde a tradição do trabalho manual encontra a inovação
                 da fabricação digital. Aqui, madeira e criatividade se unem para dar vida a projetos funcionais,
                 sustentáveis e personalizados.
                 Contamos com ferramentas manuais, elétricas e equipamentos de precisão para corte, modelagem e
@@ -111,7 +136,7 @@
                 tecnológicos, como o design digital e o corte CNC.
             </p>
 
-            <h2>O que você pode fazer na nossa Marcenaria</h2>
+            <h2>O que você pode fazer em nossa Marcenaria</h2>
 
             <ul>
                 <li>
@@ -139,9 +164,7 @@
                 </li>
             </ul>
 
-
-            <h2>Para quem é essa área?</h2>
-
+            <h2>Público alvo</h2>
             <p>
                 Estudantes, designers, marceneiros, artesãos, engenheiros, empreendedores e entusiastas que desejam
                 explorar o universo da madeira de forma criativa, segura e orientada.
@@ -151,9 +174,8 @@
             </p>
         </section>
 
-        <section>
-            <h1 id="cnc">CNC (Controle Numérico Computadorizado)</h1>
-
+        <section id="cnc">
+            <h1>CNC - Controle Numérico Computadorizado</h1>
             <p>
                 A área de CNC do Espaço Maker é dedicada à fabricação digital com precisão e automação, permitindo
                 transformar projetos digitais em objetos físicos com agilidade e exatidão.
@@ -176,11 +198,11 @@
 
         </section>
 
-        <section>
-            <h1 id="digital-lab">Espaço de Fabricação Digital</h1>
+        <section id="digital-lab">
+            <h1>Espaço de Fabricação Digital</h1>
 
             <p>
-                O Espaço Maker é um ambiente colaborativo voltado para a experimentação, prototipagem e aprendizagem
+                O Espaço de Fabricação Digital é um ambiente colaborativo voltado para a experimentação, prototipagem e aprendizagem
                 prática. Integrado ao FabLab, ele estimula a criatividade, o trabalho em equipe e a aplicação de
                 conhecimentos de diversas áreas.
             </p>
@@ -188,7 +210,7 @@
             <h2>Áreas e Recursos Disponíveis</h2>
 
 
-            Manufatura Aditiva: Impressoras 3D e equipamentos de prototipagem rápida.
+            <p>Manufatura Aditiva: Impressoras 3D e equipamentos de prototipagem rápida.
 
             Manufatura Subtrativa: Máquinas para usinagem e corte de materiais.
 
@@ -202,23 +224,42 @@
 
             Sala de Aula: Utilizada para oficinas, cursos e encontros formativos.
 
-            Café: Local de convivência para troca de ideias e relaxamento.
+            Café: Local de convivência para troca de ideias e relaxamento.</p>
         </section>
-
-
     </main>
 
-
-
     <footer id="rodape">
-        <div>
-            <p>© 2025 FabLab</p>
+        <div class="conteudo_rodape">
+          <!-- Logo da Firjan à esquerda -->
+          <div class="footer-coluna">
+            <a href="https://firjan.com.br/pagina-inicial.htm" target="_blank"><img src="../img/firjan300.png" alt="Logo FIRJAN" id="logo_firjan" loading="lazy" title="Ir ao site da FIRJAN"></a>
+          </div>
+      
+          <!-- Links rápidos-->
+          <div class="footer-coluna">
+            <h3>Links Rápidos</h3><br>
+            <ul class="footer-links">
+              <li><a href="./index.html" class="sem-efeito">Início</a></li>
+              <li><a href="./projetos/index.html" class="sem-efeito">Projetos</a></li>
+              <li><a href="#" class="sem-efeito">Sobre Nós</a></li>
+            </ul>
+          </div>
+      
+          <!-- Redes sociais do rodapé -->
+          <div class="footer-coluna">
+            <h3>Redes Sociais</h3><br>
             <div id="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
             </div>
+          </div>
         </div>
-    </footer>
+      
+        <!-- Rodapé inferior -->
+        <div class="footer-base">
+          <span class="texto_copyright">&copy; 2025 <strong>FabLaB</strong>. Todos os direitos reservados. <img src="../img/logo_fablab_azul.png" alt="Logo FabLab" class="logo-pequena texto_copy"></span> 
+        </div>
+      </footer>
 </body>
-
 </html>

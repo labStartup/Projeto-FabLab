@@ -20,7 +20,7 @@
 
   /* Identação de parágrafos */
 .ident {
-    text-indent: 22px;
+    text-indent: 28px;
   }
 
 /* Efeito de realce para seções alvo */
@@ -55,50 +55,119 @@ section.fadeout {
 
 /* Imagem da homepage */
 .img_home {
-padding: 20px;
-height: 500px;
-background: silver url('../img/img_fablab.jpg') no-repeat;
-background-size: cover;
-position: relative;
+  padding: 20px;
+  height: auto;
+  min-height: 500px;
+  background: silver url('../img/img_fablab.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
 }
 
-/* ----- Bloco para a caixa que está na imagem inicial da homepage */
-
-/* Conteiner do texto */
-.box-parag{
-width: 550px;
-background-color: rgb(217, 221, 93);
-opacity: 0.91;
-border-radius: 5px 40px 5px 40px;
-position: absolute;
-right: 50px;
-bottom: 50px;
+/* Container do texto */
+.box-parag {
+  width: 90%;
+  max-width: 570px;
+  background-color: rgba(39, 44, 44, 0.651);
+  position: relative;
+  margin-bottom: 60px;
+  border-radius: 4px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-#titulo_intro{
-color: white;
-padding: 13px 4px 4px 0;
-text-align: center;
+#titulo_intro {
+  color: #55b9d4;
+  font-size: 2em;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 
+  -1px -1px 3px black,
+  1px -1px 3px black,
+  -1px 1px 3px black,
+  1px 1px 3px black;
 }
 
-/* Estilizando o parágrafo de denro do conteiner */
+#texto-digitacao {
+  white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Garante que o texto fique escondido inicialmente */
+  border-right: .25em solid #55b9d4; /* Efeito cursor */
+  padding-right: 0.1em;
+}
+
+/* Estilizando o parágrafo de dentro do container */
 .card-p {
-color: rgb(65, 62, 62);
-text-align: end;
-padding: 0 20px 10px;
-font-size: 1em;
+  color: rgb(223, 223, 223);
+  text-align: justify;
+  padding: 0 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
 /* Estilizando o verdinho */
 .verdinho {
-color: rgb(58, 202, 58);
-
+  font-size: 1.5em;
+  color: #55b9d4;
+  display: block;
 }
 
-.h1_center {
-  text-align: center;
+.caixa2 {
+  width: 100%;
+  height: 8px;
+  background: radial-gradient(circle at center, #55b9d4, #1a81db);
+  margin-bottom: 15px;
+  border-radius: 4px;
 }
 
+#digital-lab {
+  margin-bottom: 180px;
+}
 
+/* Configuração de responsividade */
+@media (max-width: 768px) {
+  .img_home {
+    min-height: 400px;
+    padding: 10px;
+  }
+  
+  .box-parag {
+    width: 95%;
+    margin-bottom: 30px;
+  }
+  
+  #titulo_intro {
+    font-size: 1.8em;
+  }
+  
+  .verdinho {
+    font-size: 1.3em;
+  }
+}
 
+@media (max-width: 480px) {
+  .img_home {
+    min-height: 300px;
+  }
+  
+  #titulo_intro {
+    font-size: 1.5em;
+  }
+  
+  .verdinho {
+    font-size: 1.1em;
+  }
+  
+  .card-p {
+    font-size: 0.9em;
+    padding: 0 5px;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  70% { background-position: 100% 50%; }
+  120% { background-position: 0% 50%; }
 }
