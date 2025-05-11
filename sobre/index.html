@@ -1,13 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/specific.css">
     <link rel="stylesheet" href="../css/responsividades.css">
 
     <title>Sobre nós</title>
 </head>
 <body>
-    <!---------------->
+    <body>
+    <header class="header">
+        <nav class="nav">
+            <img src="../img/logo_fablab_branco.png" alt="Símbolo do FabLab" id="logo_fab">
+            <button class="hamburger"></button>
+            <ul class="nav-list">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="./index.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-th-large" title="Selecione uma das áreas abaixo"></i> Áreas</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../areas/index.html#industria"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
+                        <li><a href="../areas/index.html#cnc"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
+                        <li><a href="../areas/index.html#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
+                        <li><a href="../areas/index.html#digital_lab"><i class="fas fa-lightbulb"></i> Fabricação Digital</a></li>
+                    </ul>
+                </li>
+                <li><a href="../sobre/index.html"><i class="fas fa-users"></i> Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button id="botao_flutuante" title="Voltar para o topo da página"></button>
 </body>
 </html>
