@@ -1,3 +1,16 @@
+/* Importando fontes averta */
+@font-face {
+  font-family: "Averta Regular";
+  src: url('./fonts/AVERTA/AVERTA-REGULAR.OTF');
+}
+
+@font-face {
+  font-family: "Averta Bold";
+  src: url('./fonts/AVERTA/Averta\ Bold.otf');
+}
+
+
+
 .card-ol {
     margin-top: 1em;
     margin-left: 3em;
@@ -336,6 +349,7 @@ section.fadeout {
 div.subtitle {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 span.center {
@@ -343,6 +357,7 @@ span.center {
   font-style: italic;
   font-size: 0.8em;
 }
+/* ------------------------------- */
 
 /* Parte do nome dos desenvolvedores */
 
@@ -384,5 +399,99 @@ span.center {
     #5b1fa6 102.26%,
     #7e3dce 102.26%
   );
+}
+/* ------------------------------------ */
+
+/* Estilo do formulário Sobre */
+
+/* Estilo geral do conteiner pai */
+section.conteiner-box{
+  max-width: 100%;
+  margin: 40px auto;
+
+  background-image: url('../img/sigh-in-sobre.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: 35px;
+  box-shadow: 0 5px 5px rgba(22, 14, 14, 0.603);
+  border-radius: 25px;
+  position: relative;
+  
+}
+
+/* Seletor específico do container de formulário */
+section.conteiner-box .form-container{
+  max-width: 230px;
+  height: auto;
+  background-color: #1a1d3e9d;
+  padding: 15px;
+  line-height: 1.4em;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 5px 5px rgba(22, 14, 14, 0.603);
+  border-radius: 12px;
+  z-index: 2;
+  position: relative;  
+}
+
+/* Seletor para estilizar o título no form */
+section.conteiner-box .form-container h2{
+  font-size: 1em;
+  line-height: 24px;
+  text-align: right;
+  color: white;
+}
+
+/* Seletor para estilizar o parágrafo do form */
+section.conteiner-box .form-container p{
+  font-size: 1em;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Seletor para pegar as tag input e select para que tenha a mesma largura do pai (.form-container) */
+section.conteiner-box .form-container input, section.conteiner-box .form-container select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+/* Estilo geral para pegar o button de submit. Por padrão já vem com um estilo */
+input[type="submit"]{
+  color: white;
+  background-color: #1a1d3e;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 0 5px 5px rgba(22, 14, 14, 0.603);
+  border-radius: 14px 5px;
+}
+
+/* Deixando a imagem do fundo escura */
+section.conteiner-box > .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000be;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Desabilitando a aparência da seta do botão de select nos principais navegadores, pois vamos inserir um ícone nosso por padrão */
+.form-container select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-image: url('../img/arrow-down-short.ico');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px);
+  background-size: 25px;
+  cursor: pointer
 }
 

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Nós</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <script defer src="../js/index.js"></script>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/specific.css">
@@ -86,10 +86,10 @@
         </div>
         <div class="card-dev">
           <h3>Fabrício Amorim</h3>
-        </div>       
-          <div class="card-dev">
-            <h3>Romisson Oliveira</h3>
-          </div>
+        </div>
+        <div class="card-dev">
+          <h3>Romisson Oliveira</h3>
+        </div>
         <div class="card-dev">
           <h3>Samuel Serra</h3>
         </div>
@@ -100,14 +100,20 @@
           <h3>Wilson Lins</h3>
         </div>
       </div>
+
+      <!-- Seção para dados de devs que vai aparecer na página -->
+      <div class="data-devs">
+        <img src="" alt="">
+        <h3></h3>
+      </div>
       <!-- Criando uma seção para o formulário de contato -->
-      <section>
+      <section class="conteiner-box">
         <div class="form-container">
           <h2>INSCREVA-SE PARA RECEBER ATUALIZAÇÕES SOBRE NOSSO FABLAB</h2>
           <p>Não perca as últimas novidades no Universo Maker!
           </p>
           <!-- Criando o form -->
-          <form> Para criar um formúlario
+          <form>
             <input id="name" name="name" type="text" placeholder="Nome">
             <input id="email" name="email" type="text" placeholder="Email">
             <!-- Select -> option para criar uma caixa de seleção -->
@@ -121,6 +127,7 @@
             <input type="submit" value="INSCREVA-SE">
           </form>
         </div>
+        <div class="overlay"></div>
       </section>
     </main>
 
@@ -128,7 +135,7 @@
       <div class="conteudo_rodape">
         <!-- Logo da Firjan à esquerda -->
         <div class="footer-coluna">
-          <a href="https://firjan.com.br/pagina-inicial.htm" target="_blank"><img src="img/firjan300.png"
+          <a href="https://firjan.com.br/pagina-inicial.htm" target="_blank"><img src="../img/firjan300.png"
               alt="Logo FIRJAN" id="logo_firjan" loading="lazy" title="Ir ao site da FIRJAN"></a>
         </div>
 
@@ -136,13 +143,13 @@
         <div class="footer-coluna">
           <h3>Desenvolvedores</h3><br>
           <ul class="footer-links">
-            <li>Iago</li>
-            <li>Victor</li>
-            <li>Samuel</li>
-            <li>Romisson</li>
             <li>Anderson</li>
-            <li>Wilson</li>
+            <li>Iago</li>
             <li>Fabrício</li>
+            <li>Romisson</li>
+            <li>Samuel</li>
+            <li>Victor</li>
+            <li>Wilson</li>
           </ul>
         </div>
 
@@ -162,7 +169,7 @@
         <div class="footer-coluna">
           <h3>Redes Sociais</h3><br>
           <div id="social-links">
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/labStartup" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
           </div>
@@ -172,7 +179,7 @@
       <!-- Rodapé inferior -->
       <div class="footer-base">
         <span class="texto_copyright">&copy; 2025 <strong>FabLab</strong> - Todos os direitos reservados. <img
-            src="img/logo_fablab_azul.png" alt="Logo FabLab" class="logo-pequena texto_copy"></span>
+            src="../img/logo_fablab_azul.png" alt="Logo FabLab" class="logo-pequena texto_copy"></span>
       </div>
     </footer>
   </body>
