@@ -305,7 +305,7 @@ section.fadeout {
        border-right: 3px solid #00FF99;
     }
    to {
-      width: 20ch;
+      width: 22ch;
       border-right: 3px solid transparent;
   }
 }
@@ -319,7 +319,7 @@ section.fadeout {
 /* Estilo da página sobre nós */
 
 /* Imagem de sobre nós */
-.img_sobre {
+#img_sobre {
   padding: 20px;
   height: auto;
   min-height: 500px;  
@@ -429,25 +429,26 @@ section.conteiner-box .form-container{
   background-color: #1a1d3e9d;
   padding: 15px;
   line-height: 1.4em;
-  color: rgb(0, 0, 0);
-  box-shadow: 0 5px 5px rgba(22, 14, 14, 0.603);
+  color: #FFF;
+  box-shadow: 0 5px 15px rgba(219, 218, 218, 0.658);
   border-radius: 12px;
   z-index: 2;
-  position: relative;  
+  position: relative;   
 }
 
 /* Seletor para estilizar o título no form */
 section.conteiner-box .form-container h2{
   font-size: 1em;
   line-height: 24px;
-  text-align: right;
+  text-align: center;
   color: white;
+
 }
 
 /* Seletor para estilizar o parágrafo do form */
 section.conteiner-box .form-container p{
   font-size: 1em;
-  text-align: right;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -467,7 +468,7 @@ input[type="submit"]{
   font-weight: bold;
   cursor: pointer;
   border: 1px solid black;
-  box-shadow: 0 5px 5px rgba(22, 14, 14, 0.603);
+  box-shadow: 0 5px 15px rgba(219, 218, 218, 0.658);
   border-radius: 14px 5px;
 }
 
