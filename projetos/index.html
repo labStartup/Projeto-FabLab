@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/specific.css">
     <link rel="stylesheet" href="../css/responsividades.css">
+    <link rel="stylesheet" href="galeria_fotos.css">
+    <style>
+        h2 {
+             text-align: left;
+             margin: 60px 0 50px 0;
+             background-color: #4d7bac;
+             color: aliceblue;
+             padding: 0 0 0 8px;
+             border-radius: 12px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,12 +33,12 @@
                 <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
                 <li><a href="#"><i class="fas fa-project-diagram"></i> Projetos</a></li>
                 <li class="dropdown">
-                    <a href="#"><i class="fas fa-th-large" title="Selecione uma das áreas abaixo"></i> Áreas</a>
+                    <a href="../areas/index.html"><i class="fas fa-th-large" title="Selecione uma das áreas abaixo"></i> Áreas</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
-                        <li><a href="#"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
-                        <li><a href="#"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
-                        <li><a href="#"><i class="fas fa-lightbulb"></i> Espaço Maker</a></li>
+                        <li><a href="../areas/index.html#industria"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
+                        <li><a href="../areas/index.html#cnc"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
+                        <li><a href="../areas/index.html#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
+                        <li><a href="../areas/index.html#digital_lab"><i class="fas fa-lightbulb"></i> Fabricaçao Digital</a></li>
                     </ul>
                 </li>
                 <li><a href="#"><i class="fas fa-users"></i> Sobre nós</a></li>
@@ -37,63 +48,129 @@
 
     <button id="botao_flutuante" title="Voltar para o topo da página"></button>
 
-    <div id="img_project">
-        <div class="box-parag escuro">
-            <div class="teste"></div>
-            <h1 id="titulo_geral" class="typing">Confira nossos projetos!</h1>
+    <div class="img_home">
+        <div class="img-slider">
+            <div class="slide-topo">
+                <img src="../img/project.jpg" alt="Projetos do FabLaB">
+            </div>
+        </div>
+        <div class="box-parag">
+            <div class="teste">
+                <div class="caixa2">.</div>
+                <h1 id="titulo_intro" data-text="Acervo de Projetos">
+                    <span id="texto-digitacao" style="color: rgb(105, 230, 3);"></span>
+                </h1>
+                <p class="card-p ident">Em nosso FabLab oferecemos um espaço equipado com ferramentas de alta tecnologia para makers,
+                    designers, engenheiros, professores, estudantes e entusiastas. Aqui, você poderá prototipar, aprender e transformar suas
+                    ideias em realidade.</p>
+                <p class="card-p bold ident">Conheça nosso espaço e se surpreenda com as diversas possibilidades para transcorrer sua
+                    criatividade!</p>
+            </div>   
+            <div class="caixa2">.</div>     
         </div>
     </div>
 
     <main class="main_home">
-        <h1 class="content-container">Projetos</h1>
+        <h1>Projetos no <em>FabLab SENAI</em></h1>
         <p class="ident">
-            No FabLab do SENAI, a inovação se transforma em ação. Somos um espaço dedicado à criação, prototipagem e
+            Aqui, a inovação se transforma em ação. Somos um espaço dedicado à criação, prototipagem e
             experimentação, onde alunos, professores, profissionais da indústria e a comunidade desenvolvem soluções
             reais para problemas do cotidiano e do mercado.
         </p>
-        <p>
+        <p class="ident">
             Nossos projetos são interdisciplinares e colaborativos, promovendo o aprendizado prático por meio da
             tecnologia, da criatividade e do trabalho em equipe. A seguir, apresentamos alguns dos principais projetos e
-            iniciativas que marcam a atuação do FabLab
+            iniciativas que marcam a atuação do FabLab.
         </p>
 
-        <h2>Destaques dos nossos projetos</h2>
+        <h1>Destaques de nossos projetos</h1>
 
-        <ul>
-            <li>
-                Impressão 3D Sustentável
-                Desenvolvimento de peças funcionais utilizando filamento biodegradável. O objetivo é promover a consciência
-                ambiental aliada à tecnologia de fabricação digital.
-            </li>
-            <li>
-                Robótica Educacional
-                Criação de robôs didáticos para uso em escolas públicas, com foco em introduzir crianças e jovens ao mundo da
-                programação e da automação.
-            </li>
-            <li>
-                Dispositivos de Acessibilidade
-                Projetos voltados para inclusão, como teclados adaptados, leitores de tela e protótipos personalizados para
-                pessoas com deficiência.
-            </li>
-            <li>
-                Protótipos de Produtos Inovadores
-                Apoio a empreendedores no desenvolvimento de protótipos para testes de mercado, com suporte técnico e uso de
+        <section>
+            <h2>Impressão 3D Sustentável</h2>
+            <ul class="album-fotos album1">
+                <li class="foto foto1"><span>Manufatura Aditiva: os benefícios da tecnologia para a indústria e para o meio ambiente.</span></li>
+                <li class="foto foto2"><span>O impacto ambiental pode ser reduzido pela produção local de peças, diminuindo as emissões de gases de efeito estufa associadas ao transporte.</span></li>
+                <li class="foto foto3"><span>A impressão 3D possui capacidade de personalização e criação de modelos únicos, adaptados às preferências individuais dos consumidores, e recria peças de maquinários que passam por manutenções constantes, reduzindo a logística de compra, a importação e os custos associados.</span></li>
+            </ul>
+            <article class="video-item">
+                <div class="descricao-video">
+                    <p class="ident">Desenvolvimento de peças funcionais utilizando filamento biodegradável. O objetivo é promover a consciência ambiental aliada à tecnologia de fabricação digital.</p>
+                </div>
+                <aside class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/J9fOCC1E7Ks?si=vnRFbqwpFL91fY-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </aside>
+            </article>
+            <h2>Robótica Educacional</h2>
+            <ul class="album-fotos album2">
+                <li class="foto foto4"><span>Robô criado por alunos inspirado em máquinas agrícolas.</span></li>
+                <li class="foto foto5"><span>A robótica educacional é um recurso tecnológico de aprendizagem que dá aos estudantes a oportunidade de montar robôs, em colaboração com os colegas e sob orientação do professor, a fim de solucionar problemas, exercitar a criatividade e aplicar conceitos interdisciplinares.</span></li>
+                <li class="foto foto6"><span>Essa forma de aprendizado contribui para o desenvolvimento dos estudantes e propicia a sua atuação ativa, favorecendo a autonomia, a proatividade e o protagonismo, diferente dos modelos tradicionais de ensino, onde o protagonista é o professor. </span></li>
+            </ul>
+            <article class="video-item">
+                <div class="descricao-video">
+                    <p class="ident">Criação de robôs didáticos para uso em escolas públicas, com foco em introduzir crianças e jovens ao mundo da programação e da automação.</p>
+                </div>
+                <aside class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uOtV8M8SoH0?si=djvwlCR3aKDbP-eF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </aside>
+            </article>
+            <!-- Dispositivos de acessibilides-->
+             <h2>Dispositivos de Acessibilidade</h2>
+            <ul class="album-fotos album2">
+                <li class="foto foto7"><span>O SENAI desempenha um papel importante no desenvolvimento e na aplicação de tecnologias de acessibilidade. Através de seus centros de tecnologia e inovação, o SENAI pesquisa, desenvolve e adapta dispositivos de acessibilidade para atender às necessidades de diversos indivíduos.</span></li>
+                <li class="foto foto8"><span>Além disso, o SENAI oferece cursos e treinamentos que capacitam profissionais a utilizar e manter essas tecnologias, promovendo a inclusão e a autonomia de pessoas com deficiência tanto no ambiente de trabalho quanto na sociedade em geral.</span></li>
+                <li class="foto foto9"><span>São tecnologias assistivas projetadas para permitir que pessoas com deficiência ou mobilidade reduzida possam interagir com o mundo de forma mais eficaz. Esses dispositivos podem variar amplamente, incluindo teclados adaptados, leitores de tela, softwares de reconhecimento de voz, próteses, órteses e outras soluções personalizadas. </span></li>
+            </ul>
+            <article class="video-item">
+                <div class="descricao-video">
+                    <p class="ident">Projetos voltados para inclusão, como teclados adaptados, leitores de tela e protótipos personalizados para pessoas com deficiência.</p>
+                </div>
+                <aside class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BuzGrXotNxM?si=S9uZTW-uSHYrhdS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </aside>
+            </article>
+            <article>
+                <!-- Prototipos inovadores -->
+                <h2>Protótipos de Produtos Inovadores</h2>
+                 <ul class="album-fotos">
+                <li class="foto foto10"><span>Protótipos permitem testar a viabilidade, funcionalidade e design de um produto antes da produção em larga escala, economizando tempo e recursos.</span></li>
+                <li class="foto foto11"><span> Além disso, o SENAI fornece consultoria técnica, treinamento e acesso a uma rede de especialistas, auxiliando no aprimoramento do design, na seleção de materiais e na otimização dos processos de produção. Essa infraestrutura e expertise do SENAI são essenciais para transformar ideias inovadoras em produtos tangíveis e competitivos.</span></li>
+                <li class="foto foto12"><span>O SENAI, através do <strong>FabLaB</strong> com tecnologias avançadas, como impressão 3D, usinagem CNC e modelagem digital, facilita a criação de protótipos de alta qualidade.</span></li>
+            </ul>
+            <article class="video-item">
+                <div class="descricao-video">
+                    <p class="ident">Apoio a empreendedores no desenvolvimento de protótipos para testes de mercado, com suporte técnico e uso de
                 ferramentas de fabricação digital.
-            </li>
-            <li>
-                Design e Arquitetura Digital
-                Exploração de formas complexas e estruturas utilizando corte a laser, modelagem paramétrica e impressão 3D em
-                escala.
-            </li>
-        </ul>
-
-
-        <p>
+                O desenvolvimento de protótipos de produtos inovadores é uma etapa crucial no processo de trazer novas ideias ao mercado.</p>
+                </div>
+                <aside class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MQepBhyoPr0?si=dPB-61NVUXGvlhZK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </aside>
+            </article>
+            <article>
+            <!-- Digitalização -->
+            <h2>Design e Arquitetura Digital</h2>
+            <ul class="album-fotos">
+                <li class="foto foto13"><span>Cursos e treinamentos: Que capacitam alunos e profissionais a utilizar softwares e equipamentos de design e arquitetura digital, incluindo BIM (Building Information Modeling). Tudo isso envolve o uso de softwares de modelagem 3D (CAD), renderização, simulação e fabricação digital, como corte a laser e impressão 3D, para desenvolver projetos complexos, otimizar processos e explorar novas formas e estruturas.</span></li>
+                <li class="foto foto14"><span>Laboratórios e infraestrutura: Equipados com computadores de alto desempenho, softwares especializados e máquinas de fabricação digital, permitindo a prototipagem e a experimentação.</span></li>
+                <li class="foto foto15"><span>Projetos de pesquisa e desenvolvimento: Em parceria com empresas e instituições, o SENAI contribui para o avanço das tecnologias de design e arquitetura digital, explorando aplicações inovadoras e soluções para desafios do setor.</span></li>
+            </ul>
+            <article class="video-item">
+                <div class="descricao-video">
+                    <p class="ident">Exploração de formas complexas e estruturas utilizando corte a laser, modelagem paramétrica e impressão 3D em escala. Design e Arquitetura Digital referem-se ao uso de ferramentas e tecnologias digitais para criar e visualizar projetos nas áreas de design de produtos, design de interiores, arquitetura e construção.</p>
+                </div>
+                <aside class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pd-MF0zxhlM?si=muGrXzdU31gOLAbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </aside>
+            </article>
+        </section>
+        <hr style="margin-bottom: 40px;">
+        <p class="ident">
             Esses são apenas alguns exemplos do que o FabLab pode proporcionar. Nosso espaço está sempre aberto para novas
-            ideias, projetos colaborativos e soluções criativas.
+            ideias, projetos colaborativos e soluções criativas!
         </p>
-
     </main>
+
     <footer id="rodape">
         <div class="conteudo_rodape">
           <!-- Logo da Firjan à esquerda -->
@@ -115,7 +192,7 @@
             </ul>
           </div>
       
-          <!-- Atalhos -->
+          <!-- Atalhos e inflormações adicionais -->
           <div class="footer-coluna">
             <h3>Atalhos</h3><br>
             <ul class="footer-links">

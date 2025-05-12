@@ -2,146 +2,70 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Nós</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <script defer src="../js/index.js"></script>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/specific.css">
-  <link rel="stylesheet" href="../css/responsividades.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/specific.css">
+    <link rel="stylesheet" href="../css/responsividades.css">
 </head>
 
 <body>
-  <header class="header">
-    <nav class="nav">
-      <img src="../img/logo_fablab_branco.png" alt="Símbolo do FabLab" id="logo_fab">
-      <button class="hamburger"></button>
-      <ul class="nav-list">
-        <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
-        <li><a href="#"><i class="fas fa-project-diagram"></i> Projetos</a></li>
-        <li class="dropdown">
-          <a href="#"><i class="fas fa-th-large" title="Selecione uma das áreas abaixo"></i> Áreas</a>
-          <ul class="dropdown-menu">
-            <li><a href="#"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
-            <li><a href="#"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
-            <li><a href="#"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
-            <li><a href="#"><i class="fas fa-lightbulb"></i> Espaço Maker</a></li>
-          </ul>
-        </li>
-        <li><a href="#"><i class="fas fa-users"></i> Sobre nós</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="header">
+        <nav class="nav">
+            <img src="../img/logo_fablab_branco.png" alt="Símbolo do FabLab" id="logo_fab">
+            <button class="hamburger"></button>
+            <ul class="nav-list">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-th-large" title="Selecione uma das áreas abaixo"></i> Áreas</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
+                        <li><a href="#"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
+                        <li><a href="#"><i class="fas fa-lightbulb"></i> Espaço Maker</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-users"></i> Sobre nós</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <button id="botao_flutuante" title="Voltar para o topo da página"></button>
+    <button id="botao_flutuante" title="Voltar para o topo da página"></button>
 
-  <section>
-    <div class="img_sobre">
-      <div class="box-parag">
-        <p class="card-p">SOBRE NOSSO TRABALHO</p>
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <h2>SOBRE NOSSO TRABALHO</h2>
-  <p>Este website foi desenvolvido em grupo no curso técnico de desenvolvimento de sistemas do Institulo SENAI de
-    Tecnlogia e Automação, unidade Benfica, do Rio de Janeiro, Brasil.</p>
-  <p>Baseado nos estudos de HTML e CSS para formatação e estilização de webpage, os alunos utilizaram os ensinamentos de
-    sala de aula junto com pesquisas na web.</p>
-  <hr>
-
-  <h2>DESENVOLVEDORES</h2>
-  <h3>TURMA: <span>TEC00412024.2025-1/Noite</span></h3>
-
-  <h3>Anderson Malheiros</h3>
-  <h3>Iago Souza</h3>
-  <h3>Romisson Oliveira</h3>
-  <h3>Samuel Serra</h3>
-  <h3>Victor Silva</h3>
-  <h3>Wilson Lins</h3>
-
-  <hr>
-  <!-- Criando uma seção para o formulário de contato -->
-  <section>
-    <div class="form-container">
-      <h2>INSCREVA-SE PARA RECEBER ATUALIZAÇÕES SOBRE NOSSO FABLAB</h2>
-      <p>Não perca as últimas novidades no Universo Maker!
-      </p>
-      <!-- Criando o form -->
-      <form> Para criar um formúlario
-        <input id="name" name="name" type="text" placeholder="Nome">
-        <input id="email" name="email" type="text" placeholder="Email">
-
-        <!-- Select -> option para criar uma caixa de seleção -->
-        <select name="place">
-          <option value="aluno">Aluno</option>
-          <option value="palest">Palestrante</option>
-          <option value="vist">Visitante</option>
-          <option value="loc">Locação</option>
-        </select>
-        <!-- Como o botão submit de input não possui fechamento, vamos colocar o valor que será exibido no atributo value. -->
-        <input type="submit" value="INSCREVA-SE">
-
-      </form>
-    </div>
-  </section>
-
-  <footer id="rodape">
-    <div class="conteudo_rodape">
-      <!-- Logo da Firjan à esquerda -->
-      <div class="footer-coluna">
-        <a href="https://firjan.com.br/pagina-inicial.htm" target="_blank"><img src="img/firjan300.png"
-            alt="Logo FIRJAN" id="logo_firjan" loading="lazy" title="Ir ao site da FIRJAN"></a>
-      </div>
-
-      <!-- Desenvolvedores -->
-      <div class="footer-coluna">
-        <h3>Desenvolvedores</h3><br>
-        <ul class="footer-links">
-          <li>Iago</li>
-          <li>Victor</li>
-          <li>Samuel</li>
-          <li>Romisson</li>
-          <li>Anderson</li>
-          <li>Wilson</li>
-          <li>Fabrício</li>
-        </ul>
-      </div>
-
-      <!-- Atalhos -->
-      <div class="footer-coluna">
-        <h3>Atalhos</h3><br>
-        <ul class="footer-links">
-          <li><a href="../index.html" class="sem-efeito">Início</a></li>
-          <li><a href="../projetos/index.html" class="sem-efeito">Projetos</a></li>
-          <li><a href="/sobre/index.html" class="sem-efeito">Sobre Nós</a></li><br>
-        </ul>
-        <h3>Unidade SENAI Benfica</h3><br>
-        <span>Praça Natividade Saldanha, 19 - Benfica, Rio de Janeiro - RJ</span>
-      </div>
-
-      <!-- Redes sociais do rodapé -->
-      <div class="footer-coluna">
-        <h3>Redes Sociais</h3><br>
-        <div id="social-links">
-          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <div class="img_home">
+        <div class="img-slider">
+            <div class="slide-topo">
+                <img src="../img/img_fablab.jpg" alt="Imagem 1 do Slide">
+            </div>
+            <div class="slide-topo">
+                <img src="../img/img_fablab2.jpg" alt="Imagem 2 do Slide">
+            </div>
+            <div class="slide-topo">
+                <img src="../img/img_fablab3.jpg" alt="Imagem 3 do Slide">
+            </div>
+            <div class="slide-topo">
+              <img src="../img/fablab_benfica.jpg" alt="Imagem 4 do Slide">
+            </div>
+          </div>
+        <div class="box-parag">
+          <div class="teste">
+            <div class="caixa2">.</div>
+            <h1 id="titulo_intro" data-text="Bem vindos ao FabLab Benfica!">
+              <span id="texto-digitacao"></span>
+          </h1>
+            <p class="card-p ident">Em nosso FabLab oferecemos um espaço equipado com ferramentas de alta tecnologia para makers,
+              designers, engenheiros, professores, estudantes e entusiastas. Aqui, você poderá prototipar, aprender e transformar suas
+              ideias em realidade.</p>
+            <p class="card-p bold ident">Conheça nosso espaço e se surpreenda com as diversas possibilidades para transcorrer sua
+              criatividade!</p>
+          </div>   
+          <div class="caixa2">.</div>     
         </div>
       </div>
-    </div>
-
-    <!-- Rodapé inferior -->
-    <div class="footer-base">
-      <span class="texto_copyright">&copy; 2025 <strong>FabLab</strong> - Todos os direitos reservados. <img
-          src="img/logo_fablab_azul.png" alt="Logo FabLab" class="logo-pequena texto_copy"></span>
-    </div>
-  </footer>
 </body>
-
 </html>
