@@ -232,3 +232,186 @@ area.fadeout {
   120% { background-position: 0% 50%; }
 }
 
+/* Parte do nome dos desenvolvedores */
+
+/* Container geral */
+.container-dev {
+  display: flex;
+  gap: 5px;
+}
+
+/* Configurando card de cada dev */
+.card-dev {
+  flex: 1;  /* Todos os cards terão a mesma proporção de tamanho */
+  height: 100px;
+  overflow: hidden;
+  background: linear-gradient(
+    237.58deg,
+    #1a1d3e -122.16%,
+    #4d30c6 100.94%,
+    #01baef 100.94%
+  );
+  transition: all 0.6s ease;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 0 6px 10px rgba(17, 10, 10, 0.7);
+
+}
+.card-dev h3{
+  padding-left: 4px;
+  position: relative;
+  color: whitesmoke;  
+}
+
+.card-dev:hover {
+  flex: 1.7; /* Ao passar o mouse ele tera um tamanho de 1 cards */
+  cursor: pointer;
+  background: linear-gradient(
+    255.09deg,
+    #ff60c8 -75.17%,
+    #5b1fa6 102.26%,
+    #7e3dce 102.26%
+  );
+}
+
+/* Estilo da página sobre nós */
+
+/* Imagem de sobre nós */
+.img_sobre {
+  padding: 20px;
+  height: auto;
+  min-height: 500px;  
+  background: silver url('../img/sobreNos.jpg') no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+  box-shadow: -1px 4px 18px black;
+}
+
+/* Estilizando o parágrafo de dentro do container em sobre */
+.card-sobre {
+  width: auto;
+  color: #1a81db;
+  text-align: justify;
+  padding: 30px 30px;
+  font-size: 2em;
+  margin-bottom: 70px;
+  background-color: #00000082;
+  color: #55b9d4;  
+  border-radius: 40px 12px;
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilizando subtitulo dos desenvolvedores */
+div.subtitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+span.center {
+  color: rgb(146, 142, 142);
+  font-style: italic;
+  font-size: 0.8em;
+}
+/* ------------------------------- */
+
+
+
+/* ------------------------------------ */
+
+/* Estilo do formulário Sobre */
+
+/* Estilo geral do conteiner pai */
+section.conteiner-box{
+  max-width: 100%;
+  margin: 40px auto;
+
+  background-image: url('../img/sigh-in-sobre.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+
+  padding: 35px;
+  box-shadow: 0 5px 5px rgba(22, 14, 14, 0.603);
+  border-radius: 25px;
+  position: relative;
+  
+}
+
+/* Seletor específico do container de formulário */
+section.conteiner-box .form-container{
+  max-width: 230px;
+  height: auto;
+  background-color: #1a1d3e9d;
+  padding: 15px;
+  line-height: 1.4em;
+  color: #FFF;
+  box-shadow: 0 5px 15px rgba(219, 218, 218, 0.658);
+  border-radius: 12px;
+  z-index: 2;
+  position: relative;   
+}
+
+/* Seletor para estilizar o título no form */
+section.conteiner-box .form-container h2{
+  font-size: 1em;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+
+}
+
+/* Seletor para estilizar o parágrafo do form */
+section.conteiner-box .form-container p{
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Seletor para pegar as tag input e select para que tenha a mesma largura do pai (.form-container) */
+section.conteiner-box .form-container input, section.conteiner-box .form-container select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+/* Estilo geral para pegar o button de submit. Por padrão já vem com um estilo */
+input[type="submit"]{
+  color: white;
+  background-color: #1a1d3e;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 0 5px 15px rgba(219, 218, 218, 0.658);
+  border-radius: 14px 5px;
+}
+
+/* Deixando a imagem do fundo escura */
+section.conteiner-box > .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000be;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Desabilitando a aparência da seta do botão de select nos principais navegadores, pois vamos inserir um ícone nosso por padrão */
+.form-container select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  background-image: url('../img/arrow-down-short.ico');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px);
+  background-size: 25px;
+  cursor: pointer
+}
