@@ -666,11 +666,36 @@ main {
   z-index: 10;
 }
 
-.line-height{
-  line-height: 1.2em;
-  margin-bottom: 1.3em;
+/* ===================== Configuração das mídias ====================== */
+
+.video-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-.mb-30 {
-  margin-bottom: 30px;
+.descricao-video {
+  flex: 1;
+  padding: 15px;
+}
+
+.media {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+  padding-bottom: 28.125%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.media iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

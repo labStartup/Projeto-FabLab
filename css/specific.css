@@ -1,16 +1,3 @@
-/* Importando fontes averta */
-@font-face {
-  font-family: "Averta Regular";
-  src: url('./fonts/AVERTA/AVERTA-REGULAR.OTF');
-}
-
-@font-face {
-  font-family: "Averta Bold";
-  src: url('./fonts/AVERTA/Averta\ Bold.otf');
-}
-
-
-
 .card-ol {
     margin-top: 1em;
     margin-left: 3em;
@@ -27,12 +14,32 @@
   /* Identação de parágrafos */
 .ident {
     text-indent: 28px;
-    text-align: justify;
   }
 
+.area h1 {
+    background-color: #4d7bac;
+    border-radius: 15px;
+    color: aliceblue;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.area h2 {
+    text-align: left;
+    font-size: larger;
+}
+
 /* Efeito de realce para seções alvo */
-section.fadeout {
+area.fadeout {
   animation: fadeRealceOut 6s ease forwards;
+}
+
+.card-ol {
+  margin-top: 1em;
+  margin-left: 3em;
+  margin-right: auto;
+  text-align: justify;
+  list-style-type: none;
 }
 
 .card-ol li {
@@ -63,6 +70,12 @@ section.fadeout {
   box-shadow: -1px 4px 18px black;
 }
 
+.img_home img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .img-slider {
   position: absolute;
   top: 0;
@@ -80,12 +93,6 @@ section.fadeout {
   transition: opacity 1s ease-in-out;
   background-size: cover;
   background-position: center;
-}
-
-.slide-topo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .slide-topo.active {
@@ -118,16 +125,17 @@ section.fadeout {
 }
 
 #titulo_intro {
-  color: #55b9d4;
-  font-size: 2em;
+  /* color: #55b9d4; */
+  font-size: 1.6em;
+  font-family: 'Courier New', Courier, monospace;
   padding: 0;
   text-align: center;
   margin-bottom: 15px;
   text-shadow: 
-  -1px -1px 3px black,
-  1px -1px 3px black,
-  -1px 1px 3px black,
-  1px 1px 3px black;
+  -1px -1px 2px black,
+  1px -1px 2px black,
+  -1px 1px 2px black,
+  1px 1px 2px black;
 }
 
 #texto-digitacao {
@@ -152,7 +160,7 @@ section.fadeout {
 
 /* Estilizando o parágrafo de dentro do container */
 .card-p {
-  color: rgb(223, 223, 223);
+  color: white;
   text-align: justify;
   padding: 0 10px;
   font-size: 1em;
@@ -222,277 +230,5 @@ section.fadeout {
   0% { background-position: 0% 50%; }
   70% { background-position: 100% 50%; }
   120% { background-position: 0% 50%; }
-}
-
-/* Estilo da página projetos */
-
-/* Imagem da projeto */
-#img_project {
-  padding: 20px;
-  height: auto;
-  min-height: 500px;
-  background: silver url('../img/project.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: left;  
-  box-shadow: -1px 4px 18px black;
-}
-
-#img_project > .box-parag{
-  width: auto;
-}
-
-/* Definindo um título geral para todas as páginas */
-#titulo_geral {
-  /* font-family: monospace,'Courier New', Courier ; */
-  display: block;
-  color: #00FF99;
-  font-size: 2em;
-  padding: 0;
-  text-align: center;
-  margin-bottom: 15px;    
-}
-
-.img_project > .box-parag {
-    min-width: 100%;
-    margin-bottom: 30px;
-  }
-
-/* Definindo background-color mais escuro */
-.escuro {
-  background-color: rgba(20, 20, 20, 0.884);
-}
-
-/* Configuração de responsividade */
-@media (max-width: 768px) {
-  .img_project {
-    min-height: 400px;
-    padding: 10px;
-  }
-  
-  #titulo_geral {
-    font-size: 2em;
-  } 
-  
-
-}
-
-  @media (max-width: 480px) {
-  .img_project {
-    min-height: 300px;
-  }
-
-  #titulo_geral {
-    font-size: 1.2em;
-  }
-  
-}
-
-.typing {
-  white-space: nowrap; /* Impede quebra de linha */
-  overflow: hidden; /* Garante que o texto fique escondido inicialmente */
-  /* width: 0; */
-  animation: type 2s steps(25, end) 0s forwards, blink 0.5s step-end 1 0s;  
-}
-
-
-/* Configurando media query type e blink */
-@keyframes type {
-   from {
-      width: 0;
-       border-right: 3px solid #00FF99;
-    }
-   to {
-      width: 22ch;
-      border-right: 3px solid transparent;
-  }
-}
-
-@keyframes blink {
-  50%{
-    border-color: transparent;
-  }
-}
-
-/* Estilo da página sobre nós */
-
-/* Imagem de sobre nós */
-#img_sobre {
-  padding: 20px;
-  height: auto;
-  min-height: 500px;  
-  background: silver url('../img/sobreNos.jpg') no-repeat center;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: left;
-  box-shadow: -1px 4px 18px black;
-}
-
-/* Estilizando o parágrafo de dentro do container em sobre */
-.card-sobre {
-  width: auto;
-  color: #1a81db;
-  text-align: justify;
-  padding: 30px 30px;
-  font-size: 2em;
-  margin-bottom: 70px;
-  background-color: #00000082;
-  color: #55b9d4;  
-  border-radius: 40px 12px;
-  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
-}
-
-div.subtitle {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-span.center {
-  color: rgb(146, 142, 142);
-  font-style: italic;
-  font-size: 0.8em;
-}
-/* ------------------------------- */
-
-/* Parte do nome dos desenvolvedores */
-
-/* Container geral */
-.container-dev {
-  display: flex;
-  gap: 5px;
-}
-
-/* Configurando card de cada dev */
-.card-dev {
-  flex: 1;  /* Todos os cards terão a mesma proporção de tamanho */
-  height: 100px;
-  overflow: hidden;
-  background: linear-gradient(
-    237.58deg,
-    #1a1d3e -122.16%,
-    #4d30c6 100.94%,
-    #01baef 100.94%
-  );
-  transition: all 0.6s ease;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  box-shadow: 0 6px 10px rgba(17, 10, 10, 0.7);
-
-}
-.card-dev h3{
-  padding-left: 4px;
-  position: relative;
-  color: whitesmoke;  
-}
-
-.card-dev:hover {
-  flex: 1.7; /* Ao passar o mouse ele tera um tamanho de 1 cards */
-  cursor: pointer;
-  background: linear-gradient(
-    255.09deg,
-    #ff60c8 -75.17%,
-    #5b1fa6 102.26%,
-    #7e3dce 102.26%
-  );
-}
-/* ------------------------------------ */
-
-/* Estilo do formulário Sobre */
-
-/* Estilo geral do conteiner pai */
-section.conteiner-box{
-  max-width: 100%;
-  margin: 40px auto;
-
-  background-image: url('../img/sigh-in-sobre.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-attachment: fixed;
-
-  padding: 35px;
-  box-shadow: 0 5px 5px rgba(22, 14, 14, 0.603);
-  border-radius: 25px;
-  position: relative;
-  
-}
-
-/* Seletor específico do container de formulário */
-section.conteiner-box .form-container{
-  max-width: 230px;
-  height: auto;
-  background-color: #1a1d3e9d;
-  padding: 15px;
-  line-height: 1.4em;
-  color: #FFF;
-  box-shadow: 0 5px 15px rgba(219, 218, 218, 0.658);
-  border-radius: 12px;
-  z-index: 2;
-  position: relative;   
-}
-
-/* Seletor para estilizar o título no form */
-section.conteiner-box .form-container h2{
-  font-size: 1em;
-  line-height: 24px;
-  text-align: center;
-  color: white;
-
-}
-
-/* Seletor para estilizar o parágrafo do form */
-section.conteiner-box .form-container p{
-  font-size: 1em;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Seletor para pegar as tag input e select para que tenha a mesma largura do pai (.form-container) */
-section.conteiner-box .form-container input, section.conteiner-box .form-container select {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  border: none;
-  margin-bottom: 10px;
-}
-
-/* Estilo geral para pegar o button de submit. Por padrão já vem com um estilo */
-input[type="submit"]{
-  color: white;
-  background-color: #1a1d3e;
-  font-weight: bold;
-  cursor: pointer;
-  border: 1px solid black;
-  box-shadow: 0 5px 15px rgba(219, 218, 218, 0.658);
-  border-radius: 14px 5px;
-}
-
-/* Deixando a imagem do fundo escura */
-section.conteiner-box > .overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #000000be;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-
-/* Desabilitando a aparência da seta do botão de select nos principais navegadores, pois vamos inserir um ícone nosso por padrão */
-.form-container select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-
-  background-image: url('../img/arrow-down-short.ico');
-  background-repeat: no-repeat;
-  background-position: calc(100% - 10px);
-  background-size: 25px;
-  cursor: pointer
 }
 

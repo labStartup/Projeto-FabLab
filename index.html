@@ -8,28 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <script defer src="js/index.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/> 
   <link rel="stylesheet" href="css/specific.css">
   <link rel="stylesheet" href="css/responsividades.css">
-  <style>
-    figure img {
-
-      height: auto;
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 5px 5px 12px;
-      opacity: 1;
-      margin: 10px;
-    }
-
-    figure figcaption {
-      position: relative;
-      bottom: 50px;
-      left: 30px;
-      color: yellow;
-      opacity: 1;
-    }
-  </style>
 </head>
 
 <body>
@@ -41,16 +22,15 @@
         <li><a href="./index.html"><i class="fas fa-home"></i> Início</a></li>
         <li><a href="./projetos/index.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
         <li class="dropdown">
-          <a href="#" title="Selecione uma das áreas abaixo"><i class="fas fa-th-large"></i> Áreas</a>
+          <a href="areas/index.html" title="Selecione uma das áreas abaixo"><i class="fas fa-th-large"></i> Áreas</a>
           <ul class="dropdown-menu">
             <li><a href="areas/index.html#industria"><i class="fas fa-industry"></i> Indústria 4.0</a></li>
             <li><a href="areas/index.html#cnc"><i class="fas fa-cog"></i> Usinagem CNC</a></li>
-            <li><a href="areas/index.html#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a>
-            </li>
+            <li><a href="areas/index.html#marcenaria"><i class="fas fa-paint-roller"></i> Acabamento<br>e Marcenaria</a></li>
             <li><a href="areas/index.html#digital_lab"><i class="fas fa-lightbulb"></i> Fabricação Digital</a></li>
           </ul>
         </li>
-        <li><a href="./sobre/index.html"><i class="fas fa-users"></i> Sobre nós</a></li>
+        <li><a href="sobre/index.html"><i class="fas fa-users"></i> Sobre nós</a></li>
       </ul>
     </nav>
   </header>
@@ -59,80 +39,72 @@
 
   <div class="img_home">
     <div class="img-slider">
-      <div class="slide-topo">
-        <img src="img/img_fablab.jpg" alt="Imagem 1 do Slide">
+        <div class="slide-topo">
+            <img src="img/img_fablab.jpg" alt="Imagem 1 do Slide">
+        </div>
+        <div class="slide-topo">
+            <img src="img/img_fablab2.jpg" alt="Imagem 2 do Slide">
+        </div>
+        <div class="slide-topo">
+            <img src="img/img_fablab3.jpg" alt="Imagem 3 do Slide">
+        </div>
+        <div class="slide-topo">
+          <img src="img/fablab_benfica.jpg" alt="Imagem 4 do Slide">
+        </div>
       </div>
-      <div class="slide-topo">
-        <img src="img/img_fablab2.jpg" alt="Imagem 2 do Slide">
-      </div>
-      <div class="slide-topo">
-        <img src="img/img_fablab3.jpg" alt="Imagem 3 do Slide">
-      </div>
-      <div class="slide-topo">
-        <img src="img/fablab_benfica.jpg" alt="Imagem 4 do Slide">
-      </div>
-    </div>
     <div class="box-parag">
-      <div class="teste">
-        <div class="caixa2">.</div>
-        <h1 id="titulo_intro" data-text="Bem vindos ao FabLab Benfica!">
-          <span id="texto-digitacao"></span>
-        </h1>
-        <p class="card-p">Em nosso FabLab oferecemos um espaço equipado com ferramentas de alta tecnologia para makers,
-          designers, engenheiros, professores, estudantes e entusiastas. Aqui, você poderá prototipar, aprender e
-          transformar suas
-          ideias em realidade.</p>
-        <p class="card-p bold">Conheça nosso espaço e se surpreenda com as diversas possibilidades para transcorrer sua
-          criatividade!</p>
-      </div>
+        <div class="teste">
+            <div class="caixa2">.</div>
+            <h1 id="titulo_intro" data-text="Bem vindos ao FabLab SENAI Benfica!">
+                <span id="texto-digitacao" style="color: #55b9d4;"></span>
+            </h1>
+            <p class="card-p ident">Em nosso FabLab oferecemos um espaço equipado com ferramentas de alta tecnologia para makers,
+                designers, engenheiros, professores, estudantes e entusiastas. Aqui, você poderá prototipar, aprender e transformar suas
+                ideias em realidade.</p>
+            <p class="card-p bold ident">Conheça nosso espaço e se surpreenda com as diversas possibilidades para transcorrer sua
+                criatividade!</p>
+        </div>   
+        <div class="caixa2">.</div>     
     </div>
-  </div>
+</div>
 
   <main class="main_home">
-    <div class="content-container">
-      <h2>Criatividade no FabLab: Onde as ideias ganham vida!</h2>
-      <p class="ident">Em nosso laboratório de fabricação digital, a criatividade não é apenas bem-vinda - ela é
-        essencial. Aqui, a
+    <div>
+      <h1>Criatividade no FabLab: Onde as ideias ganham vida!</h1>
+      <p class="ident">Em nosso laboratório de fabricação digital, a criatividade não é apenas bem-vinda - ela é essencial. Aqui, a
         liberdade de experimentar, errar e recriar irá transformar conceitos abstratos em projetos tangíveis. Seja com
         uma impressora 3D, uma cortadora a laser ou um bancada de eletrônica, cada ferramenta é um convite para inovar.
-      </p>
-      <ul>
+      </p><br>
+      <ol>
         <li>
-          Liberdade para Prototipar - A possibilidade de prototipar rapidamente permite testar ideias, ajustar detalhes
-          e
+          Liberdade para Prototipar - A possibilidade de prototipar rapidamente permite testar ideias, ajustar detalhes e
           evoluir projetos em tempo real.
         </li>
         <li>
-          Colaboração que Inspira - Encontre pessoas com habilidades diferentes, troque conhecimentos e descubra
-          soluções
+          Colaboração que Inspira - Encontre pessoas com habilidades diferentes, troque conhecimentos e descubra soluções
           inesperadas. Junte-se a nós e crie algo único!
         </li>
         <li>
-          <strong>Aprendizado Contínuo</strong> - Ninguém nasce sabendo usar um cortador a laser ou programar um
-          Arduino. Em nosso FabLab
+          Aprendizado Contínuo - Ninguém nasce sabendo usar um cortador a laser ou programar um Arduino. Em nosso FabLab
           cada erro é uma lição e cada projeto é uma oportunidade de aprender algo novo. “A criatividade se alimenta da
           curiosidade”.
         </li>
         <li>
-          <strong>Soluções para Problemas Reais</strong> - Observando os desafios do cotidiano na indústria, nas cidades
-          ou na vida das
+          Soluções para Problemas Reais - Observando os desafios do cotidiano na indústria, nas cidades ou na vida das
           pessoas, pensando em soluções utilizando a criatividade ao seu favor, será em um laboratório de fabricação
           digital que sua ideia irá surgir: desde próteses acessíveis até sistemas de automação residencial, aplicando
           suas inspirações, seu projeto poderá ter um impacto social e ambiental.
         </li>
-        </ol>
-        <h2>Como Despertar Sua Criatividade no FabLab?</h2>
-        <ol>
-          <li>Comece pequeno - não espere a ideia perfeita. Protótipos simples podem evoluir para grandes projetos.</li>
-          <li>Experimente ferramentas diferentes - às vezes, uma técnica nova é o que falta para tirar uma ideia do
-            papel.</li>
-          <li>Colabore - converse com outros makers. Uma perspectiva externa pode revolucionar seu projeto.</li>
-          <li>Documente seus processos - anote erros e acertos. Isso te ajudará a refinar seu projeto para alcançar o
-            resultado idealizado.</li>
-          <li>Participe de desafios e hackathons - competições criativas são ótimas para pensar fora da caixa (“think
-            outside the box”).</li>
-        </ol>
-        <p>Segundo <cite>Albert Einstein</cite>, "A criatividade é a inteligência se divertindo."</p>
+      </ol>
+      <h2>Como Despertar Sua Criatividade no FabLab?</h2>
+      <ol>
+        <li>Comece pequeno - não espere a ideia perfeita. Protótipos simples podem evoluir para grandes projetos.</li>
+        <li>Experimente ferramentas diferentes - às vezes, uma técnica nova é o que falta para tirar uma ideia do papel.</li>
+        <li>Colabore - converse com outros makers. Uma perspectiva externa pode revolucionar seu projeto.</li>
+        <li>Documente seus processos - anote erros e acertos. Isso te ajudará a refinar seu projeto para alcançar o resultado idealizado.</li>
+        <li>Participe de desafios e hackathons - competições criativas são ótimas para pensar fora da caixa (“think outside the box”).</li>
+      </ol>
+      <p>Segundo <cite>Albert Einstein</cite>, "A criatividade é a inteligência se divertindo."</p>
     </div><br>
     <hr>
     <h2 style="text-align: left; margin: 2px 0 -20px 3px;">O que oferecemos:</h2>
@@ -140,138 +112,123 @@
     <div class="slider">
       <div class="slides" title="Clique para seguir para a próxima">
 
-        <input type="radio" name="radio-btn" id="radio1" checked>
-        <input type="radio" name="radio-btn" id="radio2">
-        <input type="radio" name="radio-btn" id="radio3">
-        <input type="radio" name="radio-btn" id="radio4">
-        <input type="radio" name="radio-btn" id="radio5">
-        <input type="radio" name="radio-btn" id="radio6">
+          <input type="radio" name="radio-btn" id="radio1" checked>
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <input type="radio" name="radio-btn" id="radio5">
+          <input type="radio" name="radio-btn" id="radio6"> 
 
-        <figure class="slide first">
-          <img src="img/corte-a-laser.jpg" alt="Corte a Laser" id="img1" loading="lazy">
-          <figcaption class="slide-caption">Corte a Laser - precisão e versatilidade para seus projetos em madeira,
-            acrílico e outros materiais.</figcaption>
-        </figure>
-
-        <figure class="slide">
-          <img src="img/impressora-3d.jpg" alt="Impressão 3D" id="img2">
-          <figcaption class="slide-caption">Impressão 3D - modele seu protótipo e traga seus designs e materialize-o em
-            plásticos, resinas e outros filamentos.</figcaption>
-        </figure>
-
-        <figure class="slide">
-          <img src="img/fresadora.jpg" alt="Fresadora CNC" id="img3">
-          <figcaption class="slide-caption">Fresadora CNC - maquinário de precisão para usinagem de diversos materiais.
-          </figcaption>
-        </figure>
-
-        <figure class="slide">
-          <img src="img/bancada-de-eletronicos.jpg" alt="Fresadora CNC" id="img4">
-          <figcaption class="slide-caption">Bancadas de Eletrônica e Computadores para Programação - Arduino, Raspberry
-            Pi, ESP 32 e outras plataformas para prototipagem eletrônica, incluindo outros dispositivos de IoT (internet
-            of things).</figcaption>
-        </figure>
-
-        <figure class="slide">
-          <img src="img/workshop.webp" alt="Workshops" id="img5">
-          <figcaption class="slide-caption">Workshops e Cursos - Participe! Aprenda novas habilidades com nossos
-            workshops sobre fabricação digital, ministradas por profissionais que são referências no mercado de
-            tecnologia da informação.</figcaption>
-        </figure>
-
-        <figure class="slide">
-          <img src="img/espaço-colab.jpg" alt="Espaço Colaborativo" id="img6">
-          <figcaption class="slide-caption">Espaço Colaborativo - ambiente inspirador e aconchegante para trocar ideias
-            e colaborar em projetos inovadores. </figcaption>
-        </figure>
-
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
-          <div class="auto-btn5"></div>
-          <div class="auto-btn6"></div>
-        </div>
+          <figure class="slide first">
+            <img src="img/corte-a-laser.jpg" alt="Corte a Laser" id="img1" loading="lazy">
+            <figcaption class="slide-caption">Corte a Laser - precisão e versatilidade para seus projetos em madeira, acrílico e outros materiais.</figcaption>
+          </figure>
+          
+          <figure class="slide">
+            <img src="img/impressora-3d.jpg" alt="Impressão 3D" id="img2">
+            <figcaption class="slide-caption">Impressão 3D - modele seu protótipo e traga seus designs e materialize-o em plásticos, resinas e outros filamentos.</figcaption>
+          </figure>
+          
+          <figure class="slide">
+            <img src="img/fresadora.jpg" alt="Fresadora CNC" id="img3">
+            <figcaption class="slide-caption">Fresadora CNC - maquinário de precisão para usinagem de diversos materiais.</figcaption>
+          </figure>
+          
+          <figure class="slide">
+            <img src="img/bancada-de-eletronicos.jpg" alt="Fresadora CNC" id="img4">
+            <figcaption class="slide-caption">Bancadas de Eletrônica e Computadores para Programação - Arduino, Raspberry Pi, ESP 32 e outras plataformas para prototipagem eletrônica, incluindo outros dispositivos de IoT (internet of things).</figcaption>
+          </figure>
+  
+          <figure class="slide">
+            <img src="img/workshop.webp" alt="Workshops" id="img5">
+            <figcaption class="slide-caption">Workshops e Cursos - Participe! Aprenda novas habilidades com nossos workshops sobre fabricação digital, ministradas por profissionais que são referências no mercado de tecnologia da informação.</figcaption>
+          </figure>
+          
+          <figure class="slide">
+            <img src="img/espaço-colab.jpg" alt="Espaço Colaborativo" id="img6">
+            <figcaption class="slide-caption">Espaço Colaborativo - ambiente inspirador e aconchegante para trocar ideias e colaborar em projetos inovadores. </figcaption>
+          </figure>
+          
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+            <div class="auto-btn5"></div>
+            <div class="auto-btn6"></div>
+          </div>
       </div>
-
+      
       <div class="manual-navigation">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-        <label for="radio5" class="manual-btn"></label>
-        <label for="radio6" class="manual-btn"></label>
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+          <label for="radio5" class="manual-btn"></label>
+          <label for="radio6" class="manual-btn"></label>
       </div>
-    </div>
-    <hr>
+  </div>
+<hr>
 
-    <h2>Por que Escolher o Nosso <em>FabLab</em>? 🙂</h2>
-    <p class="ident">No nosso <strong>FabLab</strong>, você tem acesso a equipamentos de ponta como impressoras 3D e
-      cortadoras a laser, em um ambiente seguro, climatizado e pronto para estimular sua criatividade. Faz parte de uma
-      comunidade ativa de makers, ideal para trocar experiências e aprender com outros criadores. Além disso, contamos
-      com suporte técnico especializado para te orientar em cada etapa do projeto. Promovemos eventos, workshops e
-      oportunidades de networking para quem quer se conectar com pessoas criativas. E o melhor: tudo isso com preços
-      acessíveis e pacotes flexíveis que se ajustam ao seu perfil. Venha fazer parte dessa rede e transforme suas ideias
-      em realidade!</p>
+<h2>Por que Escolher o Nosso <em>FabLab</em>? 🙂</h2>
+<p class="ident">No nosso <strong>FabLab</strong>, você tem acesso a equipamentos de ponta como impressoras 3D e cortadoras a laser, em um ambiente seguro, climatizado e pronto para estimular sua criatividade. Faz parte de uma comunidade ativa de makers, ideal para trocar experiências e aprender com outros criadores. Além disso, contamos com suporte técnico especializado para te orientar em cada etapa do projeto. Promovemos eventos, workshops e oportunidades de networking para quem quer se conectar com pessoas criativas. E o melhor: tudo isso com preços acessíveis e pacotes flexíveis que se ajustam ao seu perfil. Venha fazer parte dessa rede e transforme suas ideias em realidade!</p>
 
-    <h2>Agende uma Visita ou Participe de um Workshop!</h2>
-    <p>
-      Você é uma pessoa que adora um desafio? Não teme o novo? Quer conhecer nosso espaço ou começar um projeto?
-      Entre em contato ou visite-nos!
-    </p>
+<h2>Agende uma Visita ou Participe de um Workshop!</h2>
+<p>
+  Você é uma pessoa que adora um desafio? Não teme o novo?  Quer conhecer nosso espaço ou começar um projeto?
+  Entre em contato ou visite-nos!
+</p>
 
-    <a href="#" class="sem-efeito"><i class="fa-solid fa-phone"> &nbsp;Telefone</i></a><br>
-    <a href="mailto:lab_startup@outlook.com" class="sem-efeito"><i class="fa-solid fa-envelope"> &nbsp;Email</i></a>
-    <!-- [endereço] - [talvez, se der, um link que abre o Google Maps] -->
+<a href="#" class="sem-efeito"><i class="fa-solid fa-phone"> &nbsp;Telefone</i></a><br>
+<a href="mailto:lab_startup@outlook.com" class="sem-efeito"><i class="fa-solid fa-envelope"> &nbsp;Email</i></a>
+<!-- [endereço] - [talvez, se der, um link que abre o Google Maps] -->
 
-    <!-- [Botão : Agendar visita] -->
-    <!-- [Botão: Ver Workshops] -->
+<!-- [Botão : Agendar visita] -->
+<!-- [Botão: Ver Workshops] -->
 
-    <!-- Ou acesse: “sobre nós”. -->
+<!-- Ou acesse: “sobre nós”. -->
 
-    <h2>Últimos Projetos da Comunidade!</h2>
-    <p>(Aqui podemos colocar fotos que tirarmos no FabLab dos projetos concluídos, o que tiver disponível - e o link
-      para a página de projetos)</p>
+<h2>Últimos Projetos da Comunidade!</h2>
+<p>(Aqui podemos colocar fotos que tirarmos no FabLab dos projetos concluídos, o que tiver disponível - e o link para a página de projetos)</p>
 
-    <h2>Junte-se à Nossa Comunidade Maker!</h2>
-    <p>
-      Siga-nos nas redes sociais e fique por dentro das novidades:
-      [ícones para redes sociais: Instagram, Facebook, LinkedIn, Youtube]
-    </p>
+<h2>Junte-se à Nossa Comunidade Maker!</h2>
+<p>
+  Siga-nos nas redes sociais e fique por dentro das novidades:
+  [ícones para redes sociais: Instagram, Facebook, LinkedIn, Youtube]
+</p>
 
-    <h3>Transforme ideias em realidade. Venha fazer parte do FabLab Benfica! 🎉</h3>
+<h3>Transforme ideias em realidade. Venha fazer parte do FabLaB SENAI! 🎉</h3>
   </main>
 
   <footer id="rodape">
     <div class="conteudo_rodape">
       <!-- Logo da Firjan à esquerda -->
       <div class="footer-coluna">
-        <a href="https://firjan.com.br/pagina-inicial.htm" target="_blank"><img src="img/firjan300.png"
-            alt="Logo FIRJAN" id="logo_firjan" loading="lazy" title="Ir ao site da FIRJAN"></a>
+        <a href="https://firjan.com.br/pagina-inicial.htm" target="_blank"><img src="img/firjan300.png" alt="Logo FIRJAN" id="logo_firjan" loading="lazy" title="Ir ao site da FIRJAN"></a>
       </div>
-
+  
       <!-- Desenvolvedores -->
       <div class="footer-coluna">
         <h3>Desenvolvedores</h3><br>
         <ul class="footer-links">
-          <li>Anderson</li>
-          <li>Iago</li>
-          <li>Fabrício</li>
-          <li>Romisson</li>
-          <li>Samuel</li>
-          <li>Victor</li>
-          <li>Wilson</li>
+          <li>Iago Souza</li>
+          <li>Victor Silva</li>
+          <li>Samuel Serra</li>
+          <li>Romisson Oliveira</li>
+          <li>Anderson Malheiros</li>
+          <li>Wilson Lins</li>
+          <li>Fabrício Amorim</li>
         </ul>
       </div>
-
+  
       <!-- Atalhos -->
       <div class="footer-coluna">
         <h3>Atalhos</h3><br>
         <ul class="footer-links">
           <li><a href="./index.html" class="sem-efeito">Início</a></li>
           <li><a href="./projetos/index.html" class="sem-efeito">Projetos</a></li>
-          <li><a href="./sobre/index.html" class="sem-efeito">Sobre Nós</a></li><br>
+          <li><a href="areas/index.html" class="sem-efeito">Áreas</a></li>
+          <li><a href="/sobre/index.html" class="sem-efeito">Sobre Nós</a></li><br>
         </ul>
         <h3>Unidade SENAI Benfica</h3><br>
         <span>Praça Natividade Saldanha, 19 - Benfica, Rio de Janeiro - RJ</span>
@@ -281,19 +238,17 @@
       <div class="footer-coluna">
         <h3>Redes Sociais</h3><br>
         <div id="social-links">
-          <a href="https://github.com/labStartup" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
     </div>
-
+  
     <!-- Rodapé inferior -->
     <div class="footer-base">
-      <span class="texto_copyright">&copy; 2025 <strong>FabLab</strong> - Todos os direitos reservados. <img
-          src="img/logo_fablab_azul.png" alt="Logo FabLab" class="logo-pequena texto_copy"></span>
+      <span class="texto_copyright">&copy; 2025 <strong>FabLaB</strong> - Todos os direitos reservados. <img src="img/logo_fablab_azul.png" alt="Logo FabLab" class="logo-pequena texto_copy"></span> 
     </div>
   </footer>
 </body>
-
 </html>
