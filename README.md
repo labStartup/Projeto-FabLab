@@ -11,7 +11,7 @@ Este é um projeto desenvolvido em sala de aula de um website institucional do [
 - Contato: Detalhes para entrar em contato com o Fab Lab, incluindo endereço, telefone e e-mail.
 ---
 ## Como usar este repositório
-Este repositório contém os arquivos e a estrutura do website do [Nome do seu Fab Lab, se houver]. Para visualizar o website localmente ou contribuir para o seu desenvolvimento, siga as instruções abaixo:
+Este repositório contém os arquivos e a estrutura do website do FabLab Benfica. Para visualizar o website localmente ou contribuir para o seu desenvolvimento, siga as instruções abaixo:
 
 ### Para Visualizar o Website Localmente:
 Como este é um website estático construído com HTML, CSS e JavaScript, você não precisa de um servidor web complexo para visualizá-lo. Basta seguir estes passos:
