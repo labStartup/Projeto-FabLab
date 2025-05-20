@@ -56,7 +56,7 @@ Projeto-FabLab/
 ---
 ## Contatos
 ### Grupo
-- Entre em [contato por e-mail](mailto:startup_lab@outlook.com).
+- Entre em [contato por e-mail](mailto:startup_lab@outlook.com)
 
 ### Equipe de desenvolvedores
 #### Contatos
@@ -65,6 +65,8 @@ Projeto-FabLab/
   - [GitHub](https://github.com/AMalheiros77)
     
 * Fabrício Amorim
+  - [GitHub](https://github.com/bricioamorim)
+  - [Email](mailto:fabricioalexandres@hotmail.com)
 
 * Iago Souza
   - [Email](mailto:iagosouza56@hotmail.com)
@@ -78,7 +80,8 @@ Projeto-FabLab/
   - [GitHub](https://github.com/Samu-gif)
   
 * Victor Silva
+  - [Email](mailto:victor-18@outlook.com.br)
   - [GitHub](https://github.com/Victu)
 * Wilson Lins
-
+ - [Email](mailto:juniorlins.m@gmail.com)
   
