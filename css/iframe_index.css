@@ -1,0 +1,38 @@
+#iframe_areas {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    line-height: 25px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    min-height: 94vh;
+}
+
+#iframe_areas section {
+    padding: 5px;
+    margin: 25px auto 600px auto;
+}
+
+#iframe_areas section p {
+    text-indent: 28px;
+}
+
+#iframe_areas section h1 {
+    margin-bottom: 10px;
+}
+
+#iframe_areas section {
+      margin-left: 15px;
+}
+
+#seta {
+    margin: 40px auto 500px 40px;
+    max-width: 200px;
+    animation: apontarEsquerda 1.2s ease-in-out infinite;
+}
+
+@keyframes apontarEsquerda {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(35px);}
+    100% {transform: translateX(0);}
+}

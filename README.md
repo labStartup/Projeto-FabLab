@@ -11,7 +11,7 @@ Este é um projeto desenvolvido em sala de aula de um website institucional do [
 - Contato: Detalhes para entrar em contato com o Fab Lab, incluindo endereço, telefone e e-mail.
 ---
 ## Como usar este repositório
-Este repositório contém os arquivos e a estrutura do website do FabLab Benfica. Para visualizar o website localmente ou contribuir para o seu desenvolvimento, siga as instruções abaixo:
+Este repositório contém os arquivos e a estrutura do website do [Nome do seu Fab Lab, se houver]. Para visualizar o website localmente ou contribuir para o seu desenvolvimento, siga as instruções abaixo:
 
 ### Para Visualizar o Website Localmente:
 Como este é um website estático construído com HTML, CSS e JavaScript, você não precisa de um servidor web complexo para visualizá-lo. Basta seguir estes passos:
@@ -56,32 +56,10 @@ Projeto-FabLab/
 ---
 ## Contatos
 ### Grupo
-- Entre em [contato por e-mail](mailto:startup_lab@outlook.com)
+- Entre em [contato por e-mail](mailto:startup_lab@outlook.com).
 
 ### Equipe de desenvolvedores
-#### Contatos
-* Anderson Malheiros
-  - [Email](mailto:malheiros.77@outlook.com)
-  - [GitHub](https://github.com/AMalheiros77)
-    
-* Fabrício Amorim
-  - [GitHub](https://github.com/bricioamorim)
-  - [Email](mailto:fabricioalexandres@hotmail.com)
-
-* Iago Souza
-  - [Email](mailto:iagosouza56@hotmail.com)
-  - [GitHub](https://github.com/Iago56)
-  
+* lista com nomes
 * Romisson Oliveira
   - [Email](mailto:oliveiraromisson@hotmail.com)
   - [Github](https://github.com/romisson-oliveira)
-    
-* Samuel Serra
-  - [GitHub](https://github.com/Samu-gif)
-  
-* Victor Silva
-  - [Email](mailto:victor-18@outlook.com.br)
-  - [GitHub](https://github.com/Victu)
-* Wilson Lins
-   - [Email](mailto:juniorlins.m@gmail.com)
-  

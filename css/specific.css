@@ -30,8 +30,9 @@
 }
 
 /* Efeito de realce para seções alvo */
-area.fadeout {
-  animation: fadeRealceOut 6s ease forwards;
+.area.fadeout {
+  animation: fadeRealceOut 3s ease forwards;
+  background-color: gray;
 }
 
 .card-ol {
@@ -99,19 +100,6 @@ area.fadeout {
   opacity: 1;
 }
 
-/* Imagem da homepage 
-.img_home {
-  height: auto;
-  min-height: 500px;
-  padding: 20px;
-  background: silver url('../img/img_fablab.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: left;
-}*/
-
 /* Container do texto */
 .box-parag {
   width: 90%;
@@ -125,10 +113,10 @@ area.fadeout {
 }
 
 #titulo_intro {
-  /* color: #55b9d4; */
   font-size: 1.6em;
   font-family: 'Courier New', Courier, monospace;
   padding: 0;
+  color: #55b9d4;
   text-align: center;
   margin-bottom: 15px;
   text-shadow: 
@@ -141,7 +129,7 @@ area.fadeout {
 #texto-digitacao {
   white-space: nowrap; /* Impede quebra de linha */
   overflow: hidden; /* Garante que o texto fique escondido inicialmente */
-  border-right: .15em solid #55b9d4; /* Efeito cursor */
+  border-right: .15em solid; /* Efeito cursor */
   padding-right: 0.1em;
   animation: typing 4s steps(40, end), blink-caret 1s step-end infinite; /* Cursor pisca */
 }
@@ -199,7 +187,7 @@ area.fadeout {
   }
   
   #titulo_intro {
-    font-size: 1.8em;
+    font-size: 1.4em;
   }
   
   .verdinho {
@@ -213,7 +201,7 @@ area.fadeout {
   }
   
   #titulo_intro {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   
   .verdinho {
@@ -245,33 +233,24 @@ area.fadeout {
   flex: 1;  /* Todos os cards terão a mesma proporção de tamanho */
   height: 100px;
   overflow: hidden;
-  background: linear-gradient(
-    237.58deg,
-    #1a1d3e -122.16%,
-    #4d30c6 100.94%,
-    #01baef 100.94%
-  );
-  transition: all 0.6s ease;
+  background: linear-gradient(237.58deg, #4d7bac, #1a1d3e);
   margin-bottom: 10px;
   border-radius: 3px;
   box-shadow: 0 6px 10px rgba(17, 10, 10, 0.7);
-
+  padding: 12px;
 }
-.card-dev h3{
+
+.card-dev h3 {
   padding-left: 4px;
   position: relative;
-  color: whitesmoke;  
+  color: aliceblue; 
 }
 
 .card-dev:hover {
   flex: 1.7; /* Ao passar o mouse ele tera um tamanho de 1 cards */
+  background: linear-gradient(237.58deg, #1a1d3e -122.16%, #01baef);
   cursor: pointer;
-  background: linear-gradient(
-    255.09deg,
-    #ff60c8 -75.17%,
-    #5b1fa6 102.26%,
-    #7e3dce 102.26%
-  );
+  transition: 1s;
 }
 
 /* Estilo da página sobre nós */

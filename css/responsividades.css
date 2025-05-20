@@ -12,12 +12,11 @@
       left: -3px;
       z-index: 10;
     }
-  
+    
     .header {
       position: fixed;
-  
     }
-  
+
     .nav-list {
       position: fixed;
       top: -50px;
@@ -61,12 +60,12 @@
       right: 6px;
       border-top-color: transparent;
       margin-right: 7px;
-      overflow-y: hidden;
     }
   
     .nav.active .hamburger::before {
       transform: rotate(135deg);
       background-color: rgb(208, 219, 230);
+      overflow: hidden;
     }
   
     .nav.active .hamburger::after {
@@ -134,7 +133,7 @@
     }
   
     #botao_flutuante {
-      transition: all 0.4s ease;
+      transition: all 0.5s ease;
     }
     
     .nav:not(.active) ~ #botao_flutuante {
@@ -142,7 +141,32 @@
       visibility: visible;
       transform: translateY(0);
     }
-  
+
+    main {
+      width: 90%;
+    }
+
+    table {
+      width: 85%;
+      margin: 10px auto;
+      border-collapse: collapse;
+    }
+
+    .media {
+      margin-top: 60px;
+    }
+    
+    #info {
+      width: 10%;
+      margin: auto;
+    }
+
+    #legenda_minimapa {
+      box-sizing: content-box;
+      margin-left: -70px;
+      width: 300px;
+    }
+
     .conteudo_rodape {
       flex-direction: column;
       align-items: center;
@@ -164,141 +188,194 @@
       justify-content: center;
       gap: 1rem;
     }
-  }
-  
-  /* Responsividade para até 768px */
-  @media (max-width: 768px) {
-    body, html {
-      width: 100%;
-      overflow-x: hidden;
-    }
-  
-    .main_home {
-      padding: 20px 30px;
-    }
-  
-    #logo_fab {
-      position: relative;
-      left: 4px;
-      z-index: 100;
-    }
-  
-    .nav-list {
-      gap: 30px;
-    }
-  
-    #rodape {
-      padding: 0.5rem;
-      margin-left: 0;
-    }
-  
-    .conteudo_rodape {
-      flex-direction: column; /* Empilha as colunas verticalmente */
-      align-items: center; /* Centraliza todo o conteúdo */
-      text-align: center;
-      margin: 15px auto;
-    }
-  
-    #logo_firjan {
-      width: 150px; /* Tamanho menor para mobile */
-      margin-bottom: 20px; /* Espaçamento abaixo da logo */
-    }
-  
-    #social-links {
-      justify-content: center;
-    }
-  
-    .texto_copyright {
-      flex-direction: column; /* Empilha texto e imagem em mobile */
-      gap: 0.3rem;
-    }
-    
-    .logo-pequena {
-      margin-top: 0.5rem;
-    }
-  
-    .footer-coluna {
-      margin-bottom: 0.5rem;
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .main_home {
-      padding: 20px 30px;
-    }
-  
-    #logo_fab {
-      position: relative;
-      left: 4px;
-      z-index: 100;
-    }
-  
-    .nav-list {
-      gap: 30px;
-    }
-  
-    #rodape {
-      padding: 1.5rem;
-    }
-  
-    .conteudo_rodape {
-      flex-direction: column; /* Empilha as colunas verticalmente */
-      align-items: center; /* Centraliza todo o conteúdo */
-      text-align: center;
-    }
-  
-    #logo_firjan {
-      width: 185px; /* Tamanho menor para mobile */
-      margin-bottom: 20px; /* Espaçamento abaixo da logo */
+
+    #areas_selecionaveis, #mapa-container, #mapeamento {
+      display: none;
     }
 
-    #social-links {
-      justify-content: center;
-    }
-  
-  }
-  
-  /* Responsividade para até 480px */
-  @media (max-width: 480px) {
-    .main_home {
-      padding: 20px 15px;
-      margin-top: 70px;
-    }
-  
-    .nav-list a {
-      font-size: 18px;
-    }
-  
-    .dropdown-menu {
+    #areas_selecionaveis2 {
+      display: flex;
+      flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+      align-items: center; /* Centraliza os itens horizontalmente */
       width: 100%;
-      left: 0;
-      border-radius: 0;
-      border-left: none;
-      border-right: none;
     }
-  
-    #rodape {
-      padding: 1.5rem 1rem 0;
-    }
-  
-    #logo_firjan {
-      width: 120px; /* Tamanho ainda menor para telas muito pequenas */
-    }
-  
-    .footer-links {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    #social-links {
-      justify-content: center;
-    }
-  
-    .texto_copyright {
-      font-size: 0.7rem;
+
+    #mapeamento2 {
+      display: block;
+      width: 410px;
+      height: 360px;
+      min-width: 300px; /* Impede que o iframe fique muito estreito */
     }
     
-    .logo-pequena {
-      width: 40px;
+    #mapa-container2, #mapeamento2 {
+      display: block;
+      width: 100%; /* Ocupam a largura total em telas menores */
+      min-width: auto; /* Remove a largura mínima em telas menores */
+    }
+
+    #mapa_conteiner2 {
+      position: relative;
+      display: inline-block;
     }
   }
+  
+/* Responsividade para até 768px */
+@media (max-width: 768px) {
+  body, html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .main_home {
+    padding: 20px 30px;
+  }
+
+  #logo_fab {
+    position: relative;
+    left: 4px;
+    z-index: 100;
+  }
+
+  .nav-list {
+    gap: 30px;
+  }
+
+  #rodape {
+    padding: 0.5rem;
+    margin-left: 0;
+  }
+
+  .conteudo_rodape {
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    align-items: center; /* Centraliza todo o conteúdo */
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  #logo_firjan {
+    width: 150px; /* Tamanho menor para mobile */
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+  }
+
+  #social-links {
+    justify-content: center;
+  }
+
+  .texto_copyright {
+    flex-direction: column; /* Empilha texto e imagem em mobile */
+    gap: 0.3rem;
+  }
+  
+  .logo-pequena {
+    margin-top: 0.5rem;
+  }
+
+  .footer-coluna {
+    margin-bottom: 0.5rem;
+  }
+}
+  
+@media (max-width: 1024px) {
+  .main_home {
+    padding: 20px 30px;
+  }
+
+  #logo_fab {
+    position: relative;
+    left: 4px;
+    z-index: 100;
+  }
+
+  .nav-list {
+    gap: 30px;
+  }
+
+  #rodape {
+    padding: 1.5rem;
+  }
+
+  .conteudo_rodape {
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    align-items: center; /* Centraliza todo o conteúdo */
+    text-align: center;
+  }
+
+  #logo_firjan {
+    width: 185px; /* Tamanho menor para mobile */
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+  }
+
+  #social-links {
+    justify-content: center;
+  }
+}
+
+ /* Responsividade para até 550px */
+@media (max-width: 550px) {
+    #areas_selecionaveis {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center; /* Centraliza os itens horizontalmente */
+    }
+
+    #mapeamento {
+      display: none;
+    }
+
+    #mapeamento2 {
+      display: block;
+    }
+
+    #mapa-container, #mapeamento2 {
+        width: 100%; /* Ocupam a largura total em telas menores */
+        min-width: auto; /* Remove a largura mínima em telas menores */
+    }
+}
+  
+/* Responsividade para até 480px */
+@media (max-width: 480px) {
+  .main_home {
+    padding: 20px 15px;
+    margin-top: 70px;
+  }
+
+  .nav-list a {
+    font-size: 18px;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    left: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  #rodape {
+    padding: 1.5rem 1rem 0;
+  }
+
+  #logo_firjan {
+    width: 120px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #social-links {
+    justify-content: center;
+  }
+
+  .texto_copyright {
+    font-size: 0.7rem;
+  }
+  
+  .logo-pequena {
+    width: 40px;
+  }
+
+  #mapeamento {
+    width: 200px;
+  }
+}

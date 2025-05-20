@@ -1,27 +1,27 @@
-const menuHamburguer = document.querySelector('.hamburger');
-const navegacao = document.querySelector('.nav');
-const alternarDropdown = document.querySelector('.dropdown > a');
-const botaoFlutuante = document.querySelector('#botao_flutuante');
+const menuHamburguer = document.querySelector('.hamburger')
+const navegacao = document.querySelector('.nav')
+const alternarDropdown = document.querySelector('.dropdown > a')
+const botaoFlutuante = document.querySelector('#botao_flutuante')
 
 // Menu Hamburguer 
 menuHamburguer.addEventListener('click', () => {
-    navegacao.classList.toggle('active');
+    navegacao.classList.toggle('active')
     
-    // Sempre esconde o botão ao abrir/fechar o menu
-    botaoFlutuante.style.opacity = '0';
-    botaoFlutuante.style.visibility = 'hidden';
+    // Sempre esconde o botão ao abrir ou fechar o menu
+    botaoFlutuante.style.opacity = '0'
+    botaoFlutuante.style.visibility = 'hidden'
     
     // Só mostra o botão novamente se estiver rolado e após 500ms
     if (!navegacao.classList.contains('active')) {
         setTimeout(() => {
             if (window.scrollY > 200) {
-                botaoFlutuante.style.opacity = '1';
-                botaoFlutuante.style.visibility = 'visible';
-                botaoFlutuante.style.transform = 'translateY(0)';
+                botaoFlutuante.style.opacity = '1'
+                botaoFlutuante.style.visibility = 'visible'
+                botaoFlutuante.style.transform = 'translateY(0)'
             }
-        }, 500);
+        }, 500)
     }
-});
+})
 
 // Dropdown no modo mobile
 alternarDropdown.addEventListener('click', function(e) {
@@ -29,20 +29,22 @@ alternarDropdown.addEventListener('click', function(e) {
     if (window.innerWidth <= 750) {
         e.preventDefault();
         // Alterna a classe 'active' no elemento pai (li) para mostrar/esconder o dropdown
-        this.parentElement.classList.toggle('active');
+        this.parentElement.classList.toggle('active')
     }
-});
+})
 
 // Realce de seção ao clicar no link
 function realcarSecao(idAlvo) {
     const secaoAlvo = document.getElementById(idAlvo);
+
     if (secaoAlvo) {
         // Remove a classe 'fadeout' de todas as seções
         document.querySelectorAll('section').forEach(secao => {
             secao.classList.remove('fadeout');
-        });
+        })
+        
         secaoAlvo.classList.add('fadeout');
-        setTimeout(() => secaoAlvo.classList.remove('fadeout'), 6000);
+        setTimeout(() => secaoAlvo.classList.remove('fadeout'), 3000);
     }
 }
 
@@ -68,30 +70,30 @@ botaoFlutuante.addEventListener('click', () => {
 
 // Controle de rolagem da página
 window.addEventListener('scroll', () => {
-    // Verifica se o menu não está ativo (aberto)
+    // Verifica se o menu não está ativo ou aberto
     if (!navegacao.classList.contains('active')) {
         // Se a página tem uma rolagem de mais de 200 pixels
         if (window.scrollY > 200) {
             // Mostra o botão flutuante
-            botaoFlutuante.style.opacity = '1';
-            botaoFlutuante.style.visibility = 'visible';
-            botaoFlutuante.style.transform = 'translateY(0)';
+            botaoFlutuante.style.opacity = '1'
+            botaoFlutuante.style.visibility = 'visible'
+            botaoFlutuante.style.transform = 'translateY(0)'
         } else {
             // Esconde o botão flutuante
-            botaoFlutuante.style.opacity = '0';
-            botaoFlutuante.style.visibility = 'hidden';
-            botaoFlutuante.style.transform = 'translateY(20px)';
+            botaoFlutuante.style.opacity = '0'
+            botaoFlutuante.style.visibility = 'hidden'
+            botaoFlutuante.style.transform = 'translateY(20px)'
         }
     }
 })
 
 // Evento disparado quando o DOM está completamente carregado
 document.addEventListener('DOMContentLoaded', function() {
-    const elementoTextoDigitacao = document.getElementById('texto-digitacao');
-    const tituloIntro = document.getElementById('titulo_intro');
-    const textoCompleto = tituloIntro.getAttribute('data-text');
-    let indiceCaracter = 0;
-    let estaApagando = false;
+    const elementoTextoDigitacao = document.getElementById('texto-digitacao')
+    const tituloIntro = document.getElementById('titulo_intro')
+    const textoCompleto = tituloIntro.getAttribute('data-text')
+    let indiceCaracter = 0
+    let estaApagando = false
 
     // Função para simular o efeito de digitação
     function digitar() {
@@ -101,31 +103,75 @@ document.addEventListener('DOMContentLoaded', function() {
             indiceCaracter++; // Incrementa o índice
             setTimeout(digitar, 120); // Chama a função novamente após o tempo estimado
         } else {
-            setTimeout(resetarTexto, 15000); // Chama a função para resetar o texto após o tempo estimado
+            setTimeout(resetarTexto, 15000) // Chama a função para resetar o texto após o tempo estimado
         }
     }
 
     // Função para resetar o texto
     function resetarTexto() {
-        indiceCaracter = 0;
+        indiceCaracter = 0
         elementoTextoDigitacao.innerHTML = '' // Limpa o texto
-        digitar(); // Reinicia o efeito de digitação
+        digitar() // Reinicia o efeito de digitação
     }
 
-    digitar(); // Inicia o efeito de digitação
-});
+    digitar() // Inicia o efeito de digitação
+})
 
-/* ===================================== Configurações de slides ================================== */
+/* Realce da imagem das "Áreas do FabLab" em telas maiores */
+document.addEventListener('DOMContentLoaded', () => {
+  const map = document.querySelector('map[name="mapafablab"]')
+  const container = document.getElementById('mapa-container')
+  const areas = map.querySelectorAll('area')
+
+  // Cria divs de destaque para cada área
+  areas.forEach(area => {
+    const coords = area.coords.split(',').map(Number)
+    const highlight = document.createElement('div')
+
+    highlight.classList.add('area-realce');
+    highlight.dataset.area = area.dataset.area; // Mantém a referência da área
+
+    // Posiciona e dimensiona o div de destaque
+    if (area.shape === 'rect') {
+      highlight.style.left = `${coords[0]}px`
+      highlight.style.top = `${coords[1] + 30}px`
+      highlight.style.width = `${coords[2] - coords[0]}px`
+      highlight.style.height = `${coords[3] - coords[1]}px`
+    }
+
+    container.appendChild(highlight)
+  })
+
+  // Adiciona event listeners para cliques nas áreas
+  map.addEventListener('click', (event) => {
+    const area = event.target.closest('area')
+
+    if (area) {
+      // Remove a classe 'active' de todos os destaques
+      container.querySelectorAll('.area-realce').forEach(h => h.classList.remove('active'))
+
+      // Adiciona a classe 'active' ao destaque correspondente
+      container.querySelector(`.area-realce[data-area="${area.dataset.area}"]`).classList.add('active')
+
+      // Remove a classe 'active' após um curto período
+      setTimeout(() => {
+        container.querySelectorAll('.area-realce').forEach(h => h.classList.remove('active'))
+      }, 400)
+    }
+  })
+})
+
+// ==================================== Configurações de slides ===================================
 
 // Slide do escopo principal
 document.addEventListener('DOMContentLoaded', function() {
     const imagens = document.querySelectorAll('.slide img');
-    const botoesRadio = document.querySelectorAll('input[name="radio-btn"]');
+    const botoesRadio = document.querySelectorAll('input[name="radio-btn"]')
 
     // Adiciona um event listener para cada imagem do slide
     imagens.forEach(img => {
         img.addEventListener('click', () => {
-            let botaoRadioAtual = document.querySelector('input[name="radio-btn"]:checked');
+            let botaoRadioAtual = document.querySelector('input[name="radio-btn"]:checked')
             let proximoBotaoRadio;
 
             // Encontra o próximo botão de rádio na sequência
@@ -135,15 +181,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
                 }
             }
-            proximoBotaoRadio.checked = true; // Seleciona o próximo botão de rádio
+            proximoBotaoRadio.checked = true // Seleciona o próximo botão de rádio
         })
     })
 })
 
 // Slide do topo
 document.addEventListener('DOMContentLoaded', function() {
-    const slidesTopo = document.querySelectorAll('.slide-topo');
-    let slideAtual = 0;
+    const slidesTopo = document.querySelectorAll('.slide-topo')
+    let slideAtual = 0
 
     // Função para mostrar o slide atual
     function mostrarSlide() {
