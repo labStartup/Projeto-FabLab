@@ -84,5 +84,5 @@ Projeto-FabLab/
   - [GitHub](https://github.com/Victu)
 * Wilson Lins
  - [Email](mailto:juniorlins.m@gmail.com)
-   - [Email](mailto:juniorlins.m@gmail.com)
+ - [Email](mailto:juniorlins.m@gmail.com)
 
